@@ -1,0 +1,11 @@
+include ../form/form
+
+mixin discuss()
+	section.discuss&attributes(attributes)
+		.discuss__container
+			h2.discuss__title Готовы обсудить задачу?
+			.discuss__text Оставьте заявку, и мы перезвоним вам в ближайшие 30 минут
+			.discuss__form
+				+form()
+			.discuss__note Оставляя свои контактные данные,<br/> Вы соглашаетесь с
+				a(href="#") Политикой конфиденциальности.

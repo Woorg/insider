@@ -1,0 +1,130 @@
+.how
+	overflow hidden
+	&__container
+		@extends .container
+		padding-top 130px
+		padding-bottom 0
+		+r($m)
+			padding-top 70px
+			padding-bottom 70px
+
+	&__title
+		margin-bottom 15px
+		color #60cbe8
+		text-align center
+		+r($m)
+			margin-bottom 10px
+	&__text
+		margin-bottom 68px
+		+r($m)
+			margin-bottom 50px
+			font-size 11px
+	&__w
+		clr()
+		+r($m)
+			display flex
+			flex-flow column
+
+	&__example
+		padding-top 34px
+		width 580px
+		float right
+		+r($m)
+			padding-top 0
+			order 2
+			width auto
+			float none
+	&__example-title
+		margin-bottom 42px
+		color #60cbe8
+		font-size 30px
+		text-transform uppercase
+		letter-spacing tracking(40)
+		+r($m)
+			margin-bottom 30px
+			font-size 21px
+			font-weight bold
+			text-align center
+	&__item
+		position relative
+		margin-bottom 50px
+		padding-left 106px
+		min-height 76px
+		font-size 20px
+		line-height 1.2
+		font-weight normal
+		+r($m)
+			margin-bottom 30px
+			min-height 54px
+			padding-left 70px
+			font-size 11px
+		&:last-child
+			margin-bottom 0
+	&__item_1
+		.how__item-icon
+			&:after
+				retinaSprite($how_icon_1_group)
+				+r($m)
+					retinaSprite($how_icon_1_small_group)
+	&__item_2
+		.how__item-icon
+			&:after
+				retinaSprite($how_icon_2_group)
+				+r($m)
+					retinaSprite($how_icon_2_small_group)
+	&__item_3
+		.how__item-icon
+			&:after
+				retinaSprite($how_icon_3_group)
+				+r($m)
+					retinaSprite($how_icon_3_small_group)
+	&__item_4
+		.how__item-icon
+			&:after
+				retinaSprite($how_icon_4_group)
+				+r($m)
+					retinaSprite($how_icon_4_small_group)
+
+	&__item-text
+		position absolute
+		top 50%
+		left 106px
+		transform translateY(-50%)
+		+r($m)
+			left 70px
+	&__item-icon
+		position absolute
+		top 50%
+		left 0
+		width 76px
+		height 76px
+		border 1px solid #60cbe8
+		background-color #ffffff
+		border-radius 50%
+		transform translateY(-50%)
+		+r($m)
+			width 54px
+			height 54px
+		&:after
+			position absolute
+			top 50%
+			left 50%
+			content ''
+			transform translate(-50%, -50%)
+
+	&__image
+		width 577px
+		height 708px
+		float left
+		overflow hidden
+		+r($m)
+			margin-bottom 70px
+			order 1
+			width 322px
+			max-height 400px
+			float none
+			text-align center
+			img
+				position relative
+				right 30px
+				object-fit cover

@@ -1,0 +1,51 @@
+.footer
+	display block
+	&__container
+		@extends .container
+		padding-top 64px
+		padding-bottom 68px
+		display flex
+		flex-flow row wrap
+		justify-content space-between
+		align-items center
+		+r($m)
+			padding-top 23px
+			padding-bottom 33px
+			text-align center
+	&__logo
+		margin-left -30px
+		+r($m)
+			margin-left 0
+			margin auto
+			margin-bottom 13px
+	&__contacts
+		margin-left -46px
+		+r($m)
+			margin-left 0
+			width 100%
+	&__cert
+		retinaSprite($certified_group)
+		+r($m)
+			display none
+.f-contacts
+	&__item
+		font-size 18px
+		font-style italic
+		font-weight normal
+		line-height 1.666
+		+r($m)
+			font-size 14px
+		span
+			padding-right 10px
+			color #888888
+		a
+			color #5dcbe8
+			text-decoration none
+			&:hover
+				text-decoration underline
+
+	.f-contacts__phone
+		color #212121
+		text-decoration none
+
+

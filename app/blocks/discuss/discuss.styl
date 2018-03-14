@@ -1,0 +1,40 @@
+.discuss
+	background-color #60cbe8
+	overflow hidden
+	&_hide
+		+r($m)
+			display none
+	&__container
+		@extends .container
+		padding-top 132px
+		padding-bottom 143px
+		text-align center
+		color #FFF
+		+r($m)
+			padding-top 70px
+			padding-bottom 70px
+	&__title
+		margin-bottom 14px
+		@extends .title
+		+r($m)
+			margin-bottom 10px
+	&__text
+		margin-bottom 49px
+		font-size 30px
+		line-height 0.8
+		+r($m)
+			margin-bottom 20px
+			font-size 14px
+			line-height 1.2
+	&__form
+		margin-bottom 50px
+		+r($m)
+			margin-bottom 20px
+	&__note
+		font-size 18px
+		line-height 1.33333333333333
+		+r($m)
+			font-size 11px
+		a
+			color #FFF
+			text-decoration underline

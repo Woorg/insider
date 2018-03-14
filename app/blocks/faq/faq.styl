@@ -1,0 +1,84 @@
+.faq
+	background #FFF
+	overflow hidden
+	&__container
+		@extends .container
+		padding-top 130px
+		padding-bottom 163px
+		+r($m)
+			padding-top 70px
+			padding-bottom 20px
+	&__title
+		margin-bottom 34px
+		@extends .title
+		color #60cbe8
+		text-align center
+		+r($m)
+			margin-bottom 18px
+	&__term
+		position relative
+		padding-top 21px
+		padding-bottom 19px
+		padding-right 28px
+		padding-left 28px
+		background #f4f7f7
+		color #555555
+		font-size 20px
+		font-weight normal
+		cursor pointer
+		tr(all .3s ease)
+		+r($m)
+			padding-left 15px
+			padding-right 50px
+			padding-bottom 17px
+			font-size 12px
+			font-weight bold
+		&:after
+			position absolute
+			top 50%
+			right 28px
+			width 48px
+			height 48px
+			background url('../images/general/plus.png') 0 0 / cover no-repeat
+			content ''
+			transform translateY(-50%)
+			+r($m)
+				right 15px
+				width 28px
+				height 28px
+	&__term_active,
+	&__term:hover
+		position relative
+		background #60cbe8
+		color #FFF
+		&:after
+			position absolute
+			top 50%
+			right 28px
+			width 48px
+			height 48px
+			background url('../images/general/minus.png') 0 0 / cover no-repeat
+			content ''
+			transform translateY(-50%)
+			+r($m)
+				right 15px
+				width 28px
+				height 28px
+	&__desc
+		padding-top 30px
+		padding-right 46px
+		padding-bottom 28px
+		padding-left 46px
+		display none
+		background #FFF
+		color #888888
+		font-size 18px
+		line-height 1.666
+		font-style italic
+		font-weight normal
+		+r($m)
+			padding-top 15px
+			padding-bottom 15px
+			padding-left 0
+			padding-right 0
+			font-size 11px

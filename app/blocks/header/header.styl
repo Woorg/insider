@@ -1,0 +1,146 @@
+.header
+	position fixed
+	z-index 10
+	top 0
+	left 0
+	right 0
+	// width 100%
+	background #FFF
+	tr(all .3s ease)
+	&__container
+		padding-top 24px
+		padding-bottom 19px
+		@extends .container
+		display flex
+		flex-flow row wrap
+		justify-content space-between
+		align-items center
+	&__w
+		width 100%
+		display flex
+		flex-flow row wrap
+		justify-content space-between
+		align-items center
+		tr(all .3s ease)
+		+r($m)
+			position absolute
+			z-index 10
+			top 0
+			left 0
+			right 30px
+			width 328px
+			min-height 420px
+			flex-flow column wrap
+			justify-content flex-start
+			align-items flex-start
+			background #FFF
+			transform translateX(-200%)
+	&__w_active
+		tr(all .3s ease)
+		+r($m)
+			transform translateX(0)
+
+	&__logo
+		margin-left 0
+		+r($m)
+			margin-top 30px
+			margin-left 20px
+			margin-bottom 17px
+
+	&__nav
+		width 650px
+		+r($m)
+			width 100%
+	&__trigger
+		width 30px
+		height 26px
+		display none
+		cursor pointer
+		+r($m)
+			display block
+	&__trigger-item
+		margin-bottom 4px
+		display block
+		height 6px
+		background #00CCEA
+		&:last-child
+			margin-bottom 0
+	&__phone
+		display none
+		color #60cbe8
+		font-size 18px
+		font-weight bold
+		text-decoration none
+		+r($m)
+			display block
+
+
+
+.logo
+	retinaSprite($logo_group)
+	hide-text()
+	+r($m)
+		width 277px
+		height 73px
+		background url('../images/general/logo.png') 0 0 / cover no-repeat
+		@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
+			background url('../images/general/logo.png') 0 0 / cover no-repeat
+			background-size cover
+
+.logo_sec
+	+r($m)
+		width 226px
+		height 59px
+		background url('../images/general/logo.png') 0 0 / cover no-repeat
+		@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
+			background url('../images/general/logo.png') 0 0 / cover no-repeat
+			background-size cover
+.nav
+	+r($m)
+		background #60cbe8
+	&__list
+		display flex
+		flex-flow row wrap
+		justify-content space-between
+		+r($m)
+			margin-left 27px
+			margin-right 27px
+			flex-flow column wrap
+
+	&__item,
+	li
+		+r($m)
+			border-bottom 1px solid rgba(255,255,255, .27)
+			tr(all .3s ease)
+		&:last-child
+			+r($m)
+				border-bottom none
+		&.current-item,
+		&:hover
+			+r($m)
+				border-bottom 1px solid rgba(255,255,255, 1)
+			&:last-child
+				+r($m)
+					border-bottom none
+			.nav__link,
+			a
+				border-bottom 2px solid #60cbe8
+				+r($m)
+					border-bottom none
+
+	&__link,
+	a
+		border-bottom 2px solid transparent
+		padding-bottom 2px
+		color #212121
+		font-weight normal
+		font-size 16px
+		text-decoration none
+		text-transform uppercase
+		letter-spacing tracking(50)
+		+r($m)
+			border-bottom none
+			padding-top 30px
+			padding-bottom 30px
+			display block
+			color #FFF

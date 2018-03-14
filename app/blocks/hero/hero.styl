@@ -1,0 +1,156 @@
+.hero
+	background-color #60cbe8
+	overflow hidden
+	&__container
+		padding-top 130px
+		padding-bottom 152px
+		@extends .container
+		color #FFF
+		text-align center
+		+r($m)
+			padding-top 70px
+			padding-bottom 140px
+	&__title
+		margin-bottom 14px
+		line-height 1.3
+	&__text
+		margin-bottom 75px
+		font-size 30px
+		line-height 1.3
+		font-weight normal
+		+r($m)
+			font-size 14px
+
+	&__image
+		position relative
+		right -15px
+		margin auto
+		width 747px
+		+r($m)
+			right 0
+			width 342px
+	&__icons
+		position absolute
+		top 0
+		left 0
+		right 0
+		bottom 0
+		+r($m)
+			bottom -72px
+			padding-bottom 0
+			display flex
+			flex-flow row wrap
+			justify-content center
+			align-items flex-end
+	&__badge
+		position absolute
+		width 62px
+		height 62px
+		background url('../images/general/badge.svg') 0 0 / cover no-repeat
+		+r($m)
+			display none
+	&__badge_left
+		top 100px
+		left -64px
+	&__badge_right
+		top 27px
+		right -90px
+	&__badge-text
+		position absolute
+		top 50%
+		left 50%
+		color #60cbe8
+		font-size 16px
+		font-weight bold
+		text-transform uppercase
+		letter-spacing tracking(50)
+		transform translate(-50%, -50%)
+	&__icon
+		position absolute
+		z-index 1
+		width 85px
+		height 85px
+		background-color #ffffff
+		border-radius 50%
+		+r($m)
+			position relative
+			margin-right 20px
+			width 52px
+			height 52px
+		&:after
+			position absolute
+			top 50%
+			left 50%
+			content ''
+			transform translate(-50%, -50%)
+	&__icon_market
+		top 43px
+		left -142px
+		+r($m)
+			top 0
+			left 0
+		&:after
+			retinaSprite($icon_1_group)
+			+r($m)
+				retinaSprite($icon_1_small_group)
+
+	&__icon_gym
+		bottom -2px
+		left -86px
+		+r($m)
+			bottom 0
+			left 0
+		&:after
+			retinaSprite($icon_3_group)
+			+r($m)
+				retinaSprite($icon_3_small_group)
+	&__icon_car-repair
+		top 63px
+		right -165px
+		+r($m)
+			top 0
+			right 0
+			order 4
+			margin-right 0
+		&:after
+			retinaSprite($icon_2_group)
+			+r($m)
+				retinaSprite($icon_2_small_group)
+	&__icon_coffee
+		bottom 50px
+		right 11px
+		+r($m)
+			bottom 0
+			right 0
+		&:after
+			retinaSprite($icon_4_group)
+			+r($m)
+				retinaSprite($icon_4_small_group)
+
+	&__pointer
+		position absolute
+		+r($m)
+			display none
+	&__pointer_market
+		top 86px
+		left -90px
+		retinaSprite($pointer_t_l_group)
+	&__pointer_gym
+		bottom 38px
+		left -84px
+		retinaSprite($pointer_b_l_group)
+	&__pointer_car-repair
+		top 108px
+		right -128px
+		retinaSprite($pointer_t_r_group)
+	&__pointer_coffee
+		bottom 88px
+		right 38px
+		retinaSprite($pointer_b_r_group)
+
+
+
+
+
+
+

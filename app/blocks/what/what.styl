@@ -1,0 +1,46 @@
+.what
+	background url('../images/general/what-bg.jpg') 50% 0 no-repeat
+	+r($m)
+		background-size 560px 215px
+		min-height 215px
+	&__container
+		@extends .container
+		padding-top 160px
+		padding-bottom 104px
+		clr()
+		+r($m)
+			padding-top 70px
+			padding-bottom 70px
+	&__w
+		float right
+		width 673px
+		+r($m)
+			width auto
+			float none
+	&__title
+		margin-bottom 50px
+		@extends .title-sec
+		+r($m)
+			margin-bottom 100px
+			margin-left 110px
+	&__item
+		position relative
+		margin-bottom 38px
+		padding-left 64px
+		+r($m)
+			margin-bottom 19px
+			padding-left 40px
+			font-size 11px
+		&:last-child
+			margin-bottom 0
+		&:after
+			position absolute
+			top 50%
+			left 12px
+			retinaSprite($check_group)
+			content ''
+			transform translateY(-50%)
+			+r($m)
+				retinaSprite($check_small_group)
+
+

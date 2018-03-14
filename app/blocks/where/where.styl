@@ -1,0 +1,70 @@
+.where
+	&__container
+		@extends .container
+		padding-top 120px
+		padding-bottom 130px
+		clr()
+		+r($m)
+			position relative
+			padding-top 70px
+			padding-bottom 70px
+
+	&__w
+		padding-top 57px
+		width 580px
+		float left
+		+r($m)
+			padding-top 0
+			float none
+			width 100%
+	&__title
+		margin-bottom 74px
+		@extends .title-sec
+		color #484848
+		+r($m)
+			margin-bottom 358px
+			padding-bottom 0
+			color #60cbe8
+			text-align center
+			white-space normal
+		&:after
+			+r($m)
+				display none
+				color #60cbe8
+
+	&__list
+		+r($m)
+			text-align center
+
+	&__item
+		margin-bottom 32px
+		color #595959
+		font-weight bold
+		+r($m)
+			margin-bottom 15px
+			font-size 11px
+			font-weight bold
+			text-align center
+
+		&:last-child
+			margin-bottom 0
+		span
+			color #60cbe8
+			display block
+			font-weight normal
+			+r($m)
+				font-weight bold
+	&__image
+		margin-right -24px
+		width 580px
+		float right
+		+r($m)
+			position absolute
+			top 130px
+			left 0
+			right 0
+			margin-right 0
+			margin-bottom 10px
+			width 338px
+			float none
+			text-align center
