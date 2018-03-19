@@ -1,0 +1,54 @@
+.complete
+	background-color #f7f7f7
+	// &__in
+
+	// &__row
+
+	// &__col
+
+	&__col_second
+		margin-left -30px
+
+	&__image
+		position relative
+		z-index 1
+		top 4px
+		margin-top -58px
+		margin-left 0
+		text-align center
+		img
+			margin-top -6px
+			display inline-block
+
+		&:after
+			position absolute
+			z-index -1
+			top 89px
+			left 26px
+			width 358px
+			height 358px
+			background url('../images/general/end-circle.jpg') 0 0 / cover no-repeat
+			border-radius 50%
+			content ''
+	&__title
+		margin-top 92px
+		margin-right -20px
+		margin-bottom 15px
+		@extends .title-h1
+	&__list
+		margin-left 10px
+	&__item
+		position relative
+		margin-bottom 16px
+		padding-left 23px
+		font-size 16px
+		line-height 1.5
+		&:after
+			position absolute
+			top 8px
+			left 0
+			width 7px
+			height 7px
+			background-color #dc324d
+			border-radius 50%
+			content ''

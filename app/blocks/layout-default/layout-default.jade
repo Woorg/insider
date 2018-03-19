@@ -6,45 +6,9 @@ include ../scripts/scripts
 doctype html
 html(lang='ru')
 	include ../head/head
-	+page#top
+	+page#page-top
 		block content
-		+scripts(['//api-maps.yandex.ru/2.1/?lang=ru_RU', 'app.min.js'])
+		+scripts(['jquery.min.js', 'app.min.js'])
 
 
-		script.
-			ymaps.ready(init);
 
-			var myMap;
-			var myPlacemark;
-
-			function init (){
-
-
-				myMap = new ymaps.Map("map", {
-					center: [56.876250, 53.212234],
-					zoom: 17,
-					controls: []
-				});
-
-				myMap.behaviors.disable('scrollZoom');
-
-				//- myMap.controls.add("zoomControl", {
-				//- 	position: {top: 15, left: 15}
-				//- });
-
-				if( $(window).width() <= 425 ) {
-
-				} else {
-
-					myPlacemark = new ymaps.Placemark([56.876250, 53.212234] , {},
-						{ iconLayout: 'default#image',
-						  iconImageHref: 'assets/images/general/map-marker.png',
-						  iconImageSize: [180,226],
-						  iconImageOffset: [-96,-200]
-					});
-
-					myMap.geoObjects.add(myPlacemark);
-
-				}
-
-			}

@@ -1,13 +1,35 @@
 extends /blocks/layout-default/layout-default
 
 include /blocks/header/header
+include /blocks/hero/hero
+include /blocks/courses/courses
+include /blocks/advantages/advantages
+include /blocks/problems/problems
+include /blocks/complete/complete
+include /blocks/teachers/teachers
+include /blocks/graduates/graduates
+include /blocks/video-reviews/video-reviews
+include /blocks/process/process
+
+
+
 include /blocks/footer/footer
 
 
 block head
-	- var pageTitle = 'Insider';
+	- var pageTitle = 'Hurma insider - теория и практика ресторанного дела';
 
 block content
 	+header()
+	+hero()
+	+courses()
+	+advantages()
+	+problems()
+	+complete()
+	+teachers()
+	+graduates()
+	+video-reviews()
+	+process()
+
 	+footer()
 

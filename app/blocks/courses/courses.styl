@@ -1,0 +1,77 @@
+.courses
+	&__in
+		padding-top 114px
+		padding-bottom 98px
+// 	&__row
+
+// 	&__course
+
+
+
+.course
+	min-height 470px
+	background-color #ffffff
+	color #FFF
+	box-shadow 0 0 32px rgba(0, 0, 0, 0.11)
+	&__top
+		padding-top 60px
+		padding-right 68px
+		padding-bottom 36px
+		padding-left 68px
+		background-size cover
+	&__title
+		margin-top 0
+		margin-bottom 10px
+		font-family $rEb
+		font-size 42px
+
+	&__info
+		margin-bottom 0
+		font-size 0
+	&__info-item
+		position relative
+		margin-right 11px
+		padding-right 26px
+		display inline-block
+		vertical-align middle
+		font-family $s
+		font-size 18px
+		line-height 1.8
+		text-transform uppercase
+		&:last-child
+			&:before
+				display none
+
+		&:before
+			position absolute
+			z-index 1
+			top 50%
+			right 0
+			width 12px
+			height 16px
+			color #FFF
+			font-size 18px
+			font-family $s
+			font-weight normal
+			text-transform uppercase
+			line-height 1
+			opacity .3
+			transform translateY(calc(-50% - 1px))
+			content '/'
+
+	&__body
+		padding-top 40px
+		padding-right 40px
+		padding-bottom 45px
+		padding-left 68px
+	&__text
+		margin-bottom 18px
+		color #333
+		p
+			margin-bottom 0
+	&__desc
+		color #E77183
+		font-size 13px
+		p
+			margin-bottom 0
+

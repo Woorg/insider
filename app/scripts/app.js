@@ -1,6 +1,6 @@
 import svg4everybody from 'svg4everybody';
 // import $ from 'jquery';
-// import slick from 'slick-carousel';
+import slick from 'slick-carousel';
 // import 'magnific-popup';
 // import mask from "jquery-mask-plugin";
 // import 'jquery-validation';
@@ -26,6 +26,112 @@ import svg4everybody from 'svg4everybody';
 
 	$(function() {
 		svg4everybody();
+
+
+		// Header
+
+		if(	$(window).scrollTop() >= 1 ) {
+			$('.header__body').hide();
+		} else {
+			$('.header__body').show();
+
+		}
+
+		$(window).on('scroll', function () {
+			if(	$(window).scrollTop() >= 1 ) {
+				$('.header__body').hide();
+			} else {
+				$('.header__body').show();
+
+			}
+		});
+
+
+		// Teachers slider
+
+		let $slider = $('.teachers__slider');
+
+		if ($slider.length) {
+
+			let currentSlide;
+			let slidesCount = 0;
+			let sliderCounter = $('.teachers__count');
+			let updateSliderCounter = function(slick, currentIndex) {
+				currentSlide = slick.slickCurrentSlide() + 1;
+				slidesCount = slick.slideCount;
+				sliderCounter.text(currentSlide + ' из ' + slidesCount);
+			};
+
+			$slider.on('init', function(event, slick) {
+				$('.teachers__controls').append(sliderCounter);
+				updateSliderCounter(slick);
+			});
+
+			$slider.on('afterChange', function(event, slick, currentSlide) {
+				updateSliderCounter(slick, currentSlide);
+			});
+
+			$slider.slick({
+				slidesToShow: 1,
+				dots: false,
+				arrows: true,
+				appendArrows: '.teachers__nav'
+			});
+
+		}
+
+		// Graduates carousel
+
+		let $gradCarousel = $('.graduates__carousel');
+
+		if ($gradCarousel.length) {
+
+			$gradCarousel.slick({
+				slidesToShow: 7,
+				dots: false,
+				centerMode: true,
+				centerPadding: '30px',
+				focusOnSelect: true
+				// variableWidth: true
+			});
+
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		function setSlideCount() {
+			let $el = $('.teachers__count').find('.teachers__total');
+			$el.text(slideCount);
+		}
+
+		function setCurrentSlideNumber(currentSlide) {
+			let $el = $('.teachers__count').find('.teachers__curr');
+			$el.text(currentSlide + 1);
+		}
+
+		$slider.on('init', function(event, slick){
+			slideCount = slick.slideCount;
+			setSlideCount();
+			setCurrentSlideNumber(slick.currentSlide);
+		});
+
+		$slider.on('beforeChange', function(event, slick, currentSlide, nextSlide){
+			setCurrentSlideNumber(nextSlide);
+		});
+
+
+
 
 
 	});

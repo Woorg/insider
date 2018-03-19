@@ -3,144 +3,155 @@
 	z-index 10
 	top 0
 	left 0
-	right 0
-	// width 100%
-	background #FFF
-	tr(all .3s ease)
-	&__container
-		padding-top 24px
-		padding-bottom 19px
-		@extends .container
-		display flex
-		flex-flow row wrap
-		justify-content space-between
-		align-items center
-	&__w
-		width 100%
-		display flex
-		flex-flow row wrap
-		justify-content space-between
-		align-items center
-		tr(all .3s ease)
-		+r($m)
-			position absolute
-			z-index 10
-			top 0
-			left 0
-			right 30px
-			width 328px
-			min-height 420px
-			flex-flow column wrap
+	// padding-top 50px
+	width 100%
+	&__top
+		background-color #000000
+
+	&__body
+		padding-top 20px
+		padding-bottom 20px
+		clr()
+		.header__row
 			justify-content flex-start
-			align-items flex-start
-			background #FFF
-			transform translateX(-200%)
-	&__w_active
-		tr(all .3s ease)
-		+r($m)
-			transform translateX(0)
 
-	&__logo
-		margin-left 0
-		+r($m)
-			margin-top 30px
-			margin-left 20px
-			margin-bottom 17px
+	&__row
+		display flex
+		flex-flow row wrap
+		justify-content space-between
 
-	&__nav
-		width 650px
-		+r($m)
-			width 100%
-	&__trigger
-		width 30px
-		height 26px
-		display none
-		cursor pointer
-		+r($m)
-			display block
-	&__trigger-item
-		margin-bottom 4px
-		display block
-		height 6px
-		background #00CCEA
-		&:last-child
-			margin-bottom 0
-	&__phone
-		display none
-		color #60cbe8
-		font-size 18px
-		font-weight bold
+	&__button
+		margin-left auto
+		padding-top 18px
+		padding-right 40px
+		padding-bottom 16px
+		padding-left 26px
+		color #dc324d
+		font-family $rB
+		line-height 1
+		text-transform uppercase
 		text-decoration none
-		+r($m)
-			display block
+		span
+			position relative
+			&:after
+				position absolute
+				top 100%
+				left 0
+				width 100%
+				height 2px
+				background transparent
+				content ''
+		&:hover
+			color #dc324d
+			text-decoration none
+			span
+				&:after
+					background #dc324d
 
+	&__social
+		margin-right 24px
 
+.nav
+	&__list
+		margin-bottom 0
+		display flex
+		flex-flow row wrap
+		justify-content flex-start
+		align-items center
+	&__item
+		&:first-child
+			.nav__link
+				padding-left 0
+				padding-right 30px
+	&__item_course
+		position relative
+		background #FFF
+		box-shadow 17px 0px 32px rgba(0,0,0,0.24)
+		background-color #dc324d
+		&:after
+			position absolute
+			top 50%
+			right 0
+			height 24px
+			width 2px
+			background #FFF
+			content ''
+			transform translateY(-50%)
+		.nav__link
+			padding-left 23px
+			padding-right 25px
+	&__item_course_pro
+			&:after
+				display none
+	.nav__item_course_pro
+		.nav__link
+			padding-left 17px
+			padding-right 25px
+	&__link
+		padding-top 11px
+		padding-right 16px
+		padding-bottom 12px
+		padding-left 26px
+		display block
+		color #FFF
+		line-height 2
+		span
+			position relative
+			padding-bottom 2px
+			display inline-block
+			vertical-align middle
+			line-height 1
+			&:after
+					position absolute
+					top 100%
+					left 0
+					width 100%
+					height 2px
+					background transparent
+					content ''
+					tr(all .3s ease)
+		&:hover
+			color #FFF
+			text-decoration none
+			span
+				&:after
+					position absolute
+					top 100%
+					left 0
+					width 100%
+					height 2px
+					background #FFF
+					content ''
+
+.social
+	display flex
+	flex-flow row wrap
+	align-items center
+	&__link
+		position relative
+		margin-right 14px
+		display block
+		width 28px
+		height 28px
+		border 8px solid #ffffff
+		background-color #ffffff
+		border-radius 50%
+		text-indent -9999px
+		&:last-child
+			margin-right 0
+		&:after
+			position absolute
+			top 50%
+			left 50%
+			content ''
+			transform translate(-50%, -50%)
+	&__link_inst
+		&:after
+			retinaSprite($inst_group)
+	&__link_fb
+		&:after
+			retinaSprite($fb_group)
 
 .logo
 	retinaSprite($logo_group)
-	hide-text()
-	+r($m)
-		width 277px
-		height 73px
-		background url('../images/general/logo.png') 0 0 / cover no-repeat
-		@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
-			background url('../images/general/logo.png') 0 0 / cover no-repeat
-			background-size cover
-
-.logo_sec
-	+r($m)
-		width 226px
-		height 59px
-		background url('../images/general/logo.png') 0 0 / cover no-repeat
-		@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
-			background url('../images/general/logo.png') 0 0 / cover no-repeat
-			background-size cover
-.nav
-	+r($m)
-		background #60cbe8
-	&__list
-		display flex
-		flex-flow row wrap
-		justify-content space-between
-		+r($m)
-			margin-left 27px
-			margin-right 27px
-			flex-flow column wrap
-
-	&__item,
-	li
-		+r($m)
-			border-bottom 1px solid rgba(255,255,255, .27)
-			tr(all .3s ease)
-		&:last-child
-			+r($m)
-				border-bottom none
-		&.current-item,
-		&:hover
-			+r($m)
-				border-bottom 1px solid rgba(255,255,255, 1)
-			&:last-child
-				+r($m)
-					border-bottom none
-			.nav__link,
-			a
-				border-bottom 2px solid #60cbe8
-				+r($m)
-					border-bottom none
-
-	&__link,
-	a
-		border-bottom 2px solid transparent
-		padding-bottom 2px
-		color #212121
-		font-weight normal
-		font-size 16px
-		text-decoration none
-		text-transform uppercase
-		letter-spacing tracking(50)
-		+r($m)
-			border-bottom none
-			padding-top 30px
-			padding-bottom 30px
-			display block
-			color #FFF
+	text-indent -9999px

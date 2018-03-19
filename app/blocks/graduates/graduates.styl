@@ -1,0 +1,104 @@
+.graduates
+	&__in
+		padding-bottom 4px
+
+	&__row
+		margin-left 0
+		margin-right 0
+
+	&__title
+		margin-bottom 60px
+		@extends .title-h1
+	&__carousel
+		tr(width .3s ease)
+		.slick-arrow
+			position absolute
+			border 2px solid #dc324d
+			width 36px
+			height 36px
+			background-color #ffffff
+			border-radius 50%
+			transform translateY(calc(-50% - 80px))
+			&:before
+				position absolute
+				top 50%
+				left 50%
+				retinaSprite($slider_arrow_left_group)
+				transform translate(-50%, -50%)
+				content ''
+			&:hover
+				opacity 1
+			&.slick-prev
+				left 0
+			&.slick-next
+				right 0
+				opacity 1
+				&:before
+					transform translate(-50%, -50%) rotate(180deg)
+
+	&__item
+		padding-top 46px
+		padding-right 20px
+		padding-bottom 54px
+		padding-left 20px
+		display flex
+		justify-content space-between
+		align-items center
+		text-align center
+		cursor pointer
+		tr(width .3s ease)
+	&__photo
+		position relative
+		margin auto
+		margin-bottom 72px
+		// padding 10px
+		width 98px
+		height 98px
+		background-size cover
+		border-radius 50%
+		overflow hidden
+		tr(width .3s ease)
+		&:after
+			position absolute
+			z-index 1
+			top 0
+			left 0
+			width 100%
+			height 100px
+			background rgba(255,255,255, .6)
+			content ''
+			border-radius 50%
+	&__bottom
+		display none
+		opacity 0
+	&__name
+		margin-top 0
+		margin-bottom 9px
+		color #000
+		font-family $rEb
+		font-size 32px
+		line-height 1
+
+	&__position
+		line-height 1.428
+
+	.slick-center
+		.graduates__item
+			width 227px
+			tr(width .3s ease)
+
+		.graduates__photo
+			z-index 1
+			border 8px solid #fff
+			background-color #ffffff
+			background-size 100% 100%
+			transform scale(2.3)
+			box-shadow 0 0 32px rgba(0, 0, 0, 0.11)
+			tr(transform .3s ease)
+			&:after
+				display none
+		.graduates__bottom
+			margin-left -60px
+			margin-right -60px
+			display block
+			opacity 1

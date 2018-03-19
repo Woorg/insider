@@ -1,24 +1,38 @@
 mixin header()
 	header.header
-		.header__container
-			.header__w
-				a.header__logo.logo(href="#top") Диаграмма интернет-агенство
-				nav.header__nav.nav
-					ul.nav__list
-						li.nav__item
-							a.nav__link(href="#how") Как это работает
-						li.nav__item
-							a.nav__link(href="#whom") Преимущества
-						li.nav__item
-							a.nav__link(href="#how-much") Цены
-						li.nav__item
-							a.nav__link(href="#advantages") О нас
-						li.nav__item
-							a.nav__link(href="#map") Контакты
+		.header__top
+			.header__in.container
+				.header__row.row
+					nav.header__nav.nav
+						ul.nav__list
+							li.nav__item
+								a.nav__link(href="#link")
+									span О проекте
+							li.nav__item.nav__item_course
+								a.nav__link(href="#link")
+									span Hurma Insider
+							li.nav__item.nav__item_course.nav__item_course_pro
+								a.nav__link(href="#link")
+									span Hurma Insider Pro
+							li.nav__item
+								a.nav__link(href="#link")
+									span Преподаватели
+							li.nav__item
+								a.nav__link(href="#link")
+									span Расписание
+							li.nav__item
+								a.nav__link(href="#link")
+									span Место проведения
 
-			a.header__trigger(href="#menu trigger")
-				span.header__trigger-item
-				span.header__trigger-item
-				span.header__trigger-item
-			a.header__phone(href="tel:+73412775920") +7 (3412) 77-59-20
+					a.header__button(href="#link")
+						span записаться на курс
+
+					.header__social.social
+						a.social__link.social__link_inst(href="#") instagram
+						a.social__link.social__link_fb(href="#") Facebook
+		.header__body
+			.header__in.container
+				.header__row.row
+					a.header__logo.logo(href="#") Hurma insider - теория и практика ресторанного дела
+
 

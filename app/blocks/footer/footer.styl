@@ -1,51 +1,61 @@
 .footer
-	display block
-	&__container
-		@extends .container
-		padding-top 64px
-		padding-bottom 68px
+	height 358px
+	background-color #000000
+	&__in
+		padding-top 67px
+	&__row
+		margin-left 0
+		margin-right 0
 		display flex
 		flex-flow row wrap
-		justify-content space-between
-		align-items center
-		+r($m)
-			padding-top 23px
-			padding-bottom 33px
-			text-align center
-	&__logo
-		margin-left -30px
-		+r($m)
-			margin-left 0
-			margin auto
-			margin-bottom 13px
-	&__contacts
-		margin-left -46px
-		+r($m)
-			margin-left 0
-			width 100%
-	&__cert
-		retinaSprite($certified_group)
-		+r($m)
-			display none
-.f-contacts
+		justify-content flex-start
+	&__nav
+		margin-right 68px
+	&__created-by
+		margin-top -63px
+		margin-right 72px
+		margin-left auto
+
+.f-nav
+	color #FFF
+	&:nth-child(1)
+		min-width 98px
+	&:nth-child(2)
+		min-width 130px
+	&:nth-child(3)
+		margin-right auto
+	&:nth-child(4)
+		min-width 262px
+	&:last-child
+		margin-right 0
+	&__title
+		margin-top 0
+		margin-bottom 20px
+		font-family $rB
+		font-size 14px
+		line-height 1
+	&__list
+		margin-bottom 0
 	&__item
-		font-size 18px
-		font-style italic
-		font-weight normal
-		line-height 1.666
-		+r($m)
-			font-size 14px
-		span
-			padding-right 10px
-			color #888888
-		a
-			color #5dcbe8
-			text-decoration none
-			&:hover
-				text-decoration underline
-
-	.f-contacts__phone
-		color #212121
+		margin-bottom 20px
+		&:last-child
+			margin-bottom 0
+	&__link
+		color #FFF
 		text-decoration none
+		&:hover
+			color #FFF
+			text-decoration underline
+	&__row_bottom
+		text-align right
 
-
+.created-by
+	min-width 150px
+	display flex
+	flex-flow row wrap
+	justify-content space-between
+	align-items center
+	color #FFF
+	&__logo
+		retinaSprite($design_by_group)
+		text-indent -9999px
