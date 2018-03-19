@@ -1,7 +1,77 @@
 .advantages
+	&_second
+		.advantages__in
+			padding-top 104px
+			padding-bottom 56px
+		.advantages__title
+			@extends .title-h1
+			margin-bottom 92px
+			letter-spacing tracking(-30)
+		.advantages__list
+			justify-content space-between
+			min-height 120px
+		.advantages__item
+			padding-right 18px
+			padding-bottom 37px
+			padding-left 18px
+			width 259px
+			height auto
+		.advantages__item_1
+			.advantages__icon
+				&:after
+					retinaSprite($brain_icon_group)
+		.advantages__item_2
+			.advantages__icon
+				&:after
+					retinaSprite($market_icon_group)
+
+		.advantages__item_4
+			.advantages__icon
+				&:after
+					retinaSprite($team_icon_group)
+
+		.advantages__icon
+			margin-top -41px
+			margin-bottom 16px
+
+	&_third
+		.advantages__in
+			padding-top 112px
+			padding-bottom 56px
+		.advantages__title
+			@extends .title-h1
+			margin-bottom 92px
+		.advantages__list
+			justify-content center
+			min-height 150px
+		.advantages__item
+			padding-right 40px
+			padding-bottom 25px
+			padding-left 40px
+			width 307px
+			height auto
+		.advantages__item_1
+			.advantages__icon
+				&:after
+					retinaSprite($owner_icon_group)
+					transform translate(calc(-50% + 2px), calc(-50%))
+		.advantages__item_2
+			.advantages__icon
+				&:after
+					retinaSprite($scale_icon_group)
+		.advantages__item_3
+			.advantages__icon
+				&:after
+					retinaSprite($start_icon_group)
+
+		.advantages__icon
+			margin-bottom 20px
+
+
 	&__in
 		padding-top 70px
 		padding-bottom 70px
+
 	// &__row
 
 	&__list
@@ -32,6 +102,8 @@
 		.advantages__icon
 			&:after
 				retinaSprite($tools_icon_group)
+
+
 	&__icon
 		position relative
 		margin auto

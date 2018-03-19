@@ -1,0 +1,140 @@
+.schedule
+	display block
+	&.schedule_second
+		padding-top 90px
+		.schedule__calendar-event-w
+			background-color #000000
+		.schedule__calendar-event
+			max-width 120px
+			text-align left
+			line-height 1.2
+	&__in
+		padding-bottom 74px
+
+	// &__row
+
+	&__title
+		margin-bottom 26px
+		@extends .title-h1
+		letter-spacing tracking(-30)
+	&__calendar
+		position relative
+		margin-left 5px
+		text-align center
+	&__calendar-nav
+		margin-right -37px
+		margin-bottom 30px
+		display inline-block
+		vertical-align middle
+		text-align center
+	&__calendar-back,
+	&__calendar-next
+		position relative
+		display inline-block
+		vertical-align middle
+		hide-text()
+		retinaSprite($calendr_nav_prev_group)
+	// &__calendar-back
+
+	&__calendar-next
+		transform rotate(180deg)
+	&__calendar-month
+		padding-left 39px
+		padding-right 39px
+		display inline-block
+		vertical-align middle
+		color #000
+		font-family $s
+		font-size 28px
+		line-height 1
+		text-transform uppercase
+
+	&__calendar-table
+		width 100%
+		color #000
+		background-color #ffffff
+		table-layout fixed
+		box-shadow 0 0 32px rgba(0, 0, 0, 0.11)
+		thead
+			th
+				border 1px solid #d2d2d2
+				border-width 0 1px 1px
+				padding-top 22px
+				// padding-right 45px
+				padding-bottom 25px
+				// padding-left 45px
+				min-width 70px
+				background-color #f7f7f7
+				font-family $s
+				letter-spacing tracking(15)
+				text-align center
+				text-transform uppercase
+				&:first-child
+					border-width 0 1px 1px 0px
+
+				&:last-child
+					border-width 0 0 1px 1px
+
+		tbody
+			tr
+				&:last-child
+					td
+						border-bottom none
+			td
+				position relative
+				border 1px solid #d2d2d2
+				padding-top 15px
+				padding-right 20px
+				padding-bottom 15px
+				padding-left 20px
+				height 74px
+				background #FFF
+				&:first-child
+					border-width 0 1px 1px 0px
+
+				&:last-child
+					border-width 0 0 1px 1px
+	&__calendar-othermonth,
+	&__calendar-thismonth
+		position relative
+	// &__calendar-thismonth
+
+	.schedule__calendar-event-w
+		position absolute
+		top 5px
+		left 5px
+		bottom 5px
+		right 5px
+		background-color #dc324d
+		.schedule__calendar-day,
+		.schedule__calendar-event
+			top 12px
+			color #FFF
+		.schedule__calendar-day
+			right 12px
+		.schedule__calendar-event
+			left 12px
+	&__calendar-othermonth
+		.schedule__calendar-day
+			color #dfe4ee
+
+	&__calendar-day
+		position absolute
+		top 15px
+		right 20px
+		color #9f9f9f
+		font-family $s
+		font-size 15px
+		line-height 1
+		text-transform uppercase
+	&__calendar-event
+		position absolute
+		left 13px
+		max-width 60px
+		font-family $s
+		font-size 15px
+		line-height 1
+		text-transform uppercase
+
+
+

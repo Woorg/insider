@@ -1,0 +1,11 @@
+mixin form()
+	.form&attributes(attributes)
+		.form
+			form(action="", method="post")
+				.form__row
+					.form__field.form__field_text
+						input.form__input(type="text", value="", placeholder="Ваше Имя")
+					.form__field.form__field_text
+						input.form__input(type="text", value="", placeholder="Ваше Имя")
+					.form__field.form__field_submit
+						input.form__submit.button.button_primary(type="submit", value="оставить заявку")

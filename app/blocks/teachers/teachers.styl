@@ -1,4 +1,80 @@
 .teachers
+	&_second
+		.teachers__in
+			padding-top 23px
+			padding-bottom 57px
+		.teachers__row
+			margin-left 0
+			margin-right 0
+
+		.teachers__tabs-nav
+			margin-bottom 50px
+			text-align center
+
+		.tabs__link
+			font-size 28px
+		.teachers__list
+			margin-bottom 0
+			display flex
+			flex-flow row wrap
+			justify-content space-between
+			align-items flex-start
+		.teachers__teacher
+			margin-bottom 50px
+			width 265px
+			width ratio-percentage(265,1140)
+		.teacher
+			padding-top 0
+			text-align center
+		.teacher__title
+			margin-top 0
+			margin-bottom 10px
+			color #000
+			font-family $rEb
+			font-size 28px
+			line-height 1
+		.teacher__text
+			max-height 156px
+
+		.teacher__image
+			position relative
+			z-index 1
+			margin auto
+			margin-bottom 17px
+			width 189px
+			text-align center
+			&:after
+				position absolute
+				z-index -1
+				top 0
+				left 0
+				width 202px
+				height 202px
+				background-color #dc324d
+				border-radius 50%
+				content ''
+			img
+				margin-top -15px
+				display inline-block
+		.teacher__more
+			position relative
+			padding-bottom 2px
+			display inline-block
+			vertical-align top
+			color #333
+			font-size 14px
+			line-height 1
+			&:after
+				position absolute
+				top 100%
+				left 0
+				width 100%
+				content ''
+				border-bottom 1px dashed #333
+			&:hover
+				color #333
+				text-decoration none
+
 	&__in
 		padding-top 134px
 		padding-bottom 84px

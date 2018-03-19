@@ -1,0 +1,22 @@
+.main
+	&__in
+		padding-top 130px
+	// &__row
+
+	&__title
+		position relative
+		margin-bottom 92px
+		@extends .title-h1
+		color #FFF
+		&:after
+			position absolute
+			z-index -1
+			top -30px
+			left 0
+			content attr(data-title)
+			font-family $rEb
+			font-size 147px
+			white-space nowrap
+			line-height 1
+			color rgba(255,255,255, .1)
+			text-transform uppercase

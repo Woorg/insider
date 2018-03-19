@@ -9,6 +9,38 @@
 	line-height 1.714
 	tr(all .3s linear)
 
+	&_insider
+		background url('../images/content/hero-insider.jpg') 50% 0 no-repeat
+		background-size 2560px 462px
+		// .main
+
+		.nav__item_course
+			margin-right -2px
+			background-color #dc324d
+		.nav__item_course_pro
+			margin-left 0
+			background-color transparent
+
+
+	&_insider-pro
+		background url('../images/content/hero-insider-pro.jpg') 50% 0 no-repeat
+		background-size 2560px 462px
+		// .main
+
+		.nav__item_course
+			background-color transparent
+		.nav__item_course_pro
+			margin-left -2px
+			background-color #dc324d
+
+	&_location
+		background url('../images/content/location-bg.jpg') 50% 0 no-repeat
+		background-size 2560px 328px
+
+	&_teachers
+		background url('../images/content/teachers-bg.jpg') 50% 0 no-repeat
+		background-size 2560px 328px
+
 	h1
 		margin-top 0
 
@@ -26,15 +58,15 @@
 	font-weight normal
 	line-height 1.1
 	text-transform uppercase
-	letter-spacing tracking(-40)
+	letter-spacing tracking(-20)
 
 .button
 	outline none
 	border none
-	padding-top 14px
+	padding-top 20px
 	padding-right 30px
 	padding-left 30px
-	padding-bottom 12px
+	padding-bottom 18px
 	display inline-block
 	vertical-align top
 	font-size 14px
@@ -46,6 +78,7 @@
 	&_primary
 		background-color #dc324d
 		color #ffffff
+		font-weight normal
 		font-family $rB
 		letter-spacing tracking(0)
 		box-shadow 0 0 16px rgba(0, 0, 0, 0.24)

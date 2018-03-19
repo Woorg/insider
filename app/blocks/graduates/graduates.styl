@@ -37,10 +37,11 @@
 					transform translate(-50%, -50%) rotate(180deg)
 
 	&__item
+		gpu()
 		padding-top 46px
-		padding-right 20px
+		// padding-right 20px
 		padding-bottom 54px
-		padding-left 20px
+		// padding-left 20px
 		display flex
 		justify-content space-between
 		align-items center
@@ -58,6 +59,7 @@
 		border-radius 50%
 		overflow hidden
 		tr(width .3s ease)
+		gpu()
 		&:after
 			position absolute
 			z-index 1
@@ -83,12 +85,15 @@
 		line-height 1.428
 
 	.slick-center
+		position relative
+		z-index 1
+		gpu()
 		.graduates__item
 			width 227px
+			// width 300px
 			tr(width .3s ease)
 
 		.graduates__photo
-			z-index 1
 			border 8px solid #fff
 			background-color #ffffff
 			background-size 100% 100%

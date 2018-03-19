@@ -18,3 +18,20 @@ mixin hero()
 						.hero__video-text Узнайте о нас за 2 минуты
 
 			button.hero__down Вниз
+
+
+mixin hero-insider()
+	section.hero&attributes(attributes)
+		.hero__in.container
+			.hero__row.row
+				.hero__col.hero__col_first
+					h1.hero__title(data-title="hurma insider")
+						span.hero__unique Уникальный
+						| практический курс по ресторанному менедженту
+					.hero__text
+						p для владельцев, директоров, менеджеров и шеф-поваров заведений
+					.hero__buttons
+						a.hero__button.button.button_primary(href="#") записаться на курс
+						a.hero__button.button.button_additional(href="#")
+							span узнать подробнее
+

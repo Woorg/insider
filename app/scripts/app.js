@@ -7,6 +7,7 @@ import slick from 'slick-carousel';
 // import printThis from "print-this";
 
 (function ($) {
+	svg4everybody();
 
 	var styles = [
 		'padding: 0 9px',
@@ -25,23 +26,22 @@ import slick from 'slick-carousel';
 	console.log('%c gorlov35@gmail.com', styles);
 
 	$(function() {
-		svg4everybody();
 
 
 		// Header
 
 		if(	$(window).scrollTop() >= 1 ) {
-			$('.header__body').hide();
+			$('.header__body').hide().addClass('header__body_hide');
 		} else {
-			$('.header__body').show();
+			$('.header__body').show().removeClass('header__body_hide');
 
 		}
 
 		$(window).on('scroll', function () {
 			if(	$(window).scrollTop() >= 1 ) {
-				$('.header__body').hide();
+				$('.header__body').hide().addClass('header__body_hide');
 			} else {
-				$('.header__body').show();
+				$('.header__body').show().removeClass('header__body_hide');
 
 			}
 		});
@@ -87,16 +87,38 @@ import slick from 'slick-carousel';
 		if ($gradCarousel.length) {
 
 			$gradCarousel.slick({
+				loop: true,
 				slidesToShow: 7,
+				slidesToScroll: 1,
 				dots: false,
 				centerMode: true,
-				centerPadding: '30px',
-				focusOnSelect: true
-				// variableWidth: true
+				centerPadding: '28px',
+				focusOnSelect: true,
+				variableWidth: false
 			});
 
 		}
 
+
+		// Tabs
+
+		var tabsNavLink = $('.tabs__item');
+		var tabsNavLinkActive = 'tabs__item_active';
+		var tab = $('.tabs__tab');
+		var tabActive = 'tabs__tab_active';
+
+		tabsNavLink.click(function (event) {
+			event.preventDefault();
+			$(this).addClass(tabsNavLinkActive);
+			$(this).siblings().removeClass(tabsNavLinkActive);
+			var tabCurrent = $(this).children().attr('href');
+			tab.not(tabCurrent).removeClass(tabActive).hide();
+			$(tabCurrent).fadeIn(50).addClass(tabActive).show();
+			if ($('.tabs__tab_active .team__item').length < 3) {
+				console.log('true');
+				$('.tabs__tab_active .team__list').addClass('team__list_quanted-low');
+			}
+		});
 
 
 

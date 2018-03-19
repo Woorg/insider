@@ -1,0 +1,56 @@
+extends /blocks/layout-default/layout-location
+
+include /blocks/header/header
+include /blocks/hero/hero
+include /blocks/courses/courses
+include /blocks/course/course
+include /blocks/advantages/advantages
+include /blocks/problems/problems
+include /blocks/programm/programm
+include /blocks/complete/complete
+include /blocks/participation/participation
+include /blocks/schedule/schedule
+include /blocks/map/map
+include /blocks/questions/questions
+
+
+include /blocks/teachers/teachers
+include /blocks/graduates/graduates
+include /blocks/video-reviews/video-reviews
+include /blocks/process/process
+
+
+
+include /blocks/footer/footer
+
+
+block head
+	- var pageTitle = 'Hurma insider - Место проведения';
+
+block content
+	+header-third()
+	main.main
+		.main__in.container
+			.main__row.row
+				h1.main__title(data-title='hurma insider') Место проведения
+
+	//- +course-insider-pro().course_insider-pro
+	//- +advantages-insider-pro().advantages_third
+	//- +programm-insider-pro().programm_second
+	//- +problems()
+	//- +complete()
+	//- +participation()
+	//- +schedule-insider-pro().schedule_second
+
+	+map-second().map_second
+	//- +questions()
+
+	//- +courses()
+	//- +problems()
+	//- +complete()
+	//- +teachers()
+	//- +graduates()
+	//- +video-reviews()
+	//- +process()
+
+	+footer()

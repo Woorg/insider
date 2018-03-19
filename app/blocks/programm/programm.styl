@@ -1,0 +1,148 @@
+.programm
+	display block
+	&_second
+		.programm__text
+			max-width 610px
+	&__in
+		padding-top 50px
+		padding-bottom 128px
+
+	// &__row
+	// 	margin-left 0
+	// 	margin-right 0
+
+	&__title
+		margin-bottom 26px
+		@extends .title-h1
+		letter-spacing tracking(-30)
+	&__text
+		margin-bottom 18px
+		max-width 850px
+		font-size 16px
+		line-height 1.5
+	&__control-title
+		margin-right 10px
+		display inline-block
+		vertical-align middle
+		color #000
+		font-family $s
+		font-size 24px
+		text-transform uppercase
+	&__control-nav
+		margin-bottom 32px
+		padding-left 10px
+	&__days
+		margin-left 5px
+
+		display flex
+		flex-flow row wrap
+		justify-content space-between
+		align-items stretch
+	&__col
+		width 570px
+		width ratio-percentage(570, 1140)
+		.programm__day
+			&:last-child
+				&:after
+					// top -28px
+					// height calc(100% - 87px )
+					height 50%
+					background #DA3D45 url('../images/general/day-last-bottom.png') 0 100% no-repeat
+	&__col_second
+		.programm__day
+			&:first-child
+				&:after
+					top -38px
+					height 48px
+					background #DA3D45 url('../images/general/day-last-top.png') 0 0 no-repeat
+			&:nth-child(2)
+				&:after
+					// top calc(-100% + 22px)
+					top calc(-100% + 2px)
+
+					height 100%
+					// height 93%
+					background #DA3D45
+	&__day
+		position relative
+		padding-left 30px
+		padding-bottom 20px
+		// min-height 264px
+		min-height 200px
+		&:before
+			position absolute
+			z-index 1
+			// top 10px
+			top 0
+			left -10px
+			border 4px solid #da3d45
+			content ""
+			width 23px
+			height 23px
+			background-color #ffffff
+			border-radius 50%
+			box-shadow 0 0 10px rgba(0, 0, 0, 0.24)
+		&:after
+			position absolute
+			top 10px
+			left 0
+			content ''
+			width 3px
+			height 100%
+			background #DA3D45
+
+	&__day-title
+		position relative
+		margin-top 0
+		margin-bottom 15px
+		color #d6d6d6
+		font-family $rR
+		font-size 28px
+		line-height 1.1
+		span
+			margin-right 5px
+			color #000
+			font-family $rEb
+
+	&__sub-title
+		margin-bottom 10px
+		color #000
+		font-family $rB
+		line-height 1.428
+
+	&__list
+		margin-left 0
+		// margin-bottom 30px
+		margin-bottom 0
+
+	&__list-item
+		position relative
+		margin-bottom 12px
+		padding-left 18px
+		line-height 1.4
+		&:after
+			position absolute
+			// top 50%
+			top 6px
+			left 0
+			width 4px
+			height 4px
+			content ''
+			background-color #dc324d
+			border-radius 50%
+			transform translateY(-50%)
+			transform none
+
+	&__list-item_imp
+		color #dc324d
+
+	&__total
+		padding-left 20px
+		font-size 36px
+		font-family $rSb
+		line-height 1
+
+	&__price
+		margin-bottom 34px
+
+	// &__button

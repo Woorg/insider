@@ -1,0 +1,29 @@
+.form
+	display block
+	&__row
+		display flex
+		flex-flow row wrap
+		justify-content flex-start
+	&__field
+		margin-right 18px
+		&:last-child
+			margin-right 0
+	// &__field_submit
+
+	&__input
+		border 1px solid #c2c2c2
+		padding-left 18px
+		padding-right 18px
+		width 100%
+		height 52px
+		color #7f7f7f
+		font-size 16px
+
+		+placeholder()
+			color #7f7f7f
+
+	&__submit
+		height 52px
+		font-size 14px
+		font-family $rB
+

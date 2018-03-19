@@ -1,0 +1,29 @@
+mixin map()
+	.map&attributes(attributes)
+		.map__in.container
+			.map__row.row
+				h2.map__title Наш адрес
+
+		.map__area-w
+			.map__area#map
+
+			.map__address-w.container
+				.map__address
+					.map__address-title One door community
+					.map__address-text Москва, Новослободская, 16а, метро Менделеевская
+
+
+
+mixin map-second()
+	.map&attributes(attributes)
+		.map__in.container
+			.map__row.row
+				h2.map__title Адрес
+				.map__text
+					p Москва, Новослободская, 16а, метро Менделеевская
+					a.map__mail(href="mailto:achegonado@vsyahurma.ru") achegonado@vsyahurma.ru
+					a.map__phone(href="tel:+79676969920") +7 967 696-99-20
+
+		.map__area-w
+			.map__area#map
+

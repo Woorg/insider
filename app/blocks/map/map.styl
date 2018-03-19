@@ -1,0 +1,70 @@
+.map
+	display block
+	overflow hidden
+	&_second
+		.map__title
+			font-size 32px
+	&__in
+		padding-top 45px
+		padding-bottom 60px
+	// &__row
+
+	&__title
+		margin-bottom 10px
+		@extends .title-h1
+		color #000
+		letter-spacing tracking(-40)
+	&__text
+		margin-bottom 0
+		max-width 200px
+		p
+			margin-bottom 0
+		a
+			color #333
+			&:hover
+				color #333
+	&__mail,
+	&__phone
+		display block
+	&__mail
+		text-decoration underline
+		&:hover
+			text-decoration none
+	&__phone
+		text-decoration none
+		&:hover
+			text-decoration none
+	&__area-w
+		position relative
+	&__area
+		position relative
+		padding-top 32.7368421052632%
+		max-height 510px
+	&__address-w
+		position absolute
+		top 0
+		right 0
+		min-height auto
+	&__address
+		position absolute
+		z-index 1
+		top 180px
+		right 80px
+		width 458px
+		min-height 177px
+		padding-top 45px
+		padding-left 40px
+		padding-bottom 45px
+		padding-right 30px
+		background #FFF
+		color #000
+		text-align left
+		box-shadow 0 0 32px rgba(0, 0, 0, 0.11)
+	&__address-title
+		margin-bottom 15px
+		font-family $s
+		font-size 32px
+		line-height 1.71875
+		text-transform uppercase
+	// &__address-text
+

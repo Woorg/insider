@@ -1,0 +1,13 @@
+include ../form/form
+
+mixin questions()
+	section.questions&attributes(attributes)
+		.questions__in.container
+			.questions__row.row
+				.questions__w
+					h2.questions__title Остались вопросы
+					.questions__text
+						p Отправьте заявку на консультацию, и мы перезвоним в течении 30 минут, чтобы рассказать подробнее обо всём, что вас интересует. Вы так же можете задать вопросы через онлайн-консультант или позвонить по телефоу +7 926 696-99-20
+					.questions__form
+						+form()
+

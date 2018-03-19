@@ -1,0 +1,314 @@
+include ../tabs/tabs
+
+mixin programm()
+	section.programm&attributes(attributes)
+		.programm__in.container
+			.programm__row.row
+				h2.programm__title Программа курса
+				.programm__text
+					p Курс обучения занимает 5 дней и состоит из теоретических занятий и практики — вы увидите своими глазами, как построена работа в каждом из  наших баров вместе с менеджерами нашей компании и сможете задать любые интересующие вас вопросы.
+				.programm__control.tabs
+					.programm__control-nav
+						.programm__control-title управление:
+
+						ul.tabs__nav.service__tabs-nav
+							li.tabs__item.tabs__item_active
+								a.tabs__link(href="#tab-1") рестораном
+							li.tabs__item
+								a.tabs__link(href="#tab-2") кухней
+							li.tabs__item
+								a.tabs__link(href="#tab-3") Залом
+							li.tabs__item
+								a.tabs__link(href="#tab-4") баром
+
+					#tab-1.tabs__tab.tabs__tab_active
+						.programm__days
+							.programm__col
+								.programm__day
+									.programm__day-title
+										span Гости
+										| / День 1
+									ul.programm__list
+										li.programm__list-item Знакомство. Основы организации ресторана / бара
+										li.programm__list-item Что такое ресторан? Чего хотят гости?
+										li.programm__list-item Стандартизация всех процессов в ресторане
+										li.programm__list-item Эффективное управление сменой
+										li.programm__list-item Решение конфликтных ситуаций.
+										li.programm__list-item.programm__list-item_imp Стажировка: Работа менеджера на смене
+
+								.programm__day
+									.programm__day-title
+										span Сотрудники
+										| / День 2
+									ul.programm__list
+										li.programm__list-item Дисциплина в ресторане
+										li.programm__list-item Как искать "звезд" или правильный набор сотрудников
+										li.programm__list-item Построение системы обучения
+										li.programm__list-item Мотивация сотрудников
+										li.programm__list-item.programm__list-item_imp Стажировка: Работа на кухне
+
+								.programm__day
+									.programm__day-title
+										span Деньги
+										| / День 3
+									ul.programm__list
+										li.programm__list-item Бюджет ресторана. Планирование продаж
+										li.programm__list-item Управленческая отчетность
+										li.programm__list-item Увеличение выручки, как игра
+										li.programm__list-item Оптимизация расходов
+										li.programm__list-item Основное о работе с себестоимостью.
+										li.programm__list-item Инвентаризация
+										li.programm__list-item Эффективное расписание
+										li.programm__list-item.programm__list-item_imp Стажировка: Работа менеджера на смене
+
+							.programm__col.programm__col_second
+								.programm__day
+									.programm__day-title
+										span Кухня
+										| / День 4
+									ul.programm__list
+										li.programm__list-item Система запуска меню
+										li.programm__list-item Стандартизация вкусов и подач
+										li.programm__list-item Эргономика. Скорость работы
+										li.programm__list-item Главное о санитарии в ресторане
+										li.programm__list-item Административно техническая работа
+										li.programm__list-item.programm__list-item_imp Стажировка: Работа в баре
+
+								.programm__day
+									.programm__day-title
+										span Маркетинг
+										| / День 5
+									ul.programm__list
+										li.programm__list-item Маркетинг. Концепция ресторана
+										li.programm__list-item Маркетинг. Привлечение новых гостей
+										li.programm__list-item Маркетинг ресторана. Удержание гостей
+										li.programm__list-item Настоящая лояльность или работа с повторными визитами
+										li.programm__list-item Развитие менеджеров. Делегирование обязанностей
+
+										li.programm__list-item.programm__list-item_imp Стажировка: Работа менеджера на смене
+
+								.programm__total
+									.programm__price 77 000 -
+									a.programm__button.button.button_primary(href="#") записаться на курс
+
+
+					#tab-2.tabs__tab
+
+						.programm__days
+							.programm__col
+								.programm__day
+									.programm__day-title
+										span Гости
+										| / День 1
+									ul.programm__list
+										li.programm__list-item Знакомство. Основы организации ресторана / бара
+										li.programm__list-item Что такое ресторан? Чего хотят гости?
+										li.programm__list-item Стандартизация всех процессов в ресторане
+										li.programm__list-item Эффективное управление сменой
+										li.programm__list-item Решение конфликтных ситуаций.
+										li.programm__list-item.programm__list-item_imp Стажировка: Работа на кухне
+										li.programm__list-item.programm__list-item_imp Экскурсия: Кухня сетевого ресторана
+
+								.programm__day
+									.programm__day-title
+										span Сотрудники
+										| / День 2
+									ul.programm__list
+										li.programm__list-item Дисциплина в ресторане
+										li.programm__list-item Как искать "звезд" или правильный набор сотрудников
+										li.programm__list-item Построение системы обучения
+										li.programm__list-item Мотивация сотрудников
+										li.programm__list-item.programm__list-item_imp Экскурсия: Кухня концептуального ресторана
+
+								.programm__day
+									.programm__day-title
+										span Деньги
+										| / День 3
+									ul.programm__list
+										li.programm__list-item Оптимизация расходов
+										li.programm__list-item Основное о работе с себестоимостью.
+										li.programm__list-item Инвентаризация
+										li.programm__list-item Эффективное расписание
+										li.programm__list-item.programm__list-item_imp Стажировка: Открытие Кухни
+
+							.programm__col.programm__col_second
+								.programm__day
+									.programm__day-title
+										span Кухня
+										| / День 4
+									ul.programm__list
+										li.programm__list-item Система запуска меню
+										li.programm__list-item Стандартизация вкусов и подач
+										li.programm__list-item Эргономика. Скорость работы
+										li.programm__list-item Главное о санитарии в ресторане
+										li.programm__list-item Административно техническая работа
+										li.programm__list-item.programm__list-item_imp Сдача теста
+
+								.programm__total
+									.programm__price 60 000 -
+									a.programm__button.button.button_primary(href="#") записаться на курс
+
+
+
+					#tab-3.tabs__tab
+
+						.programm__days
+							.programm__col
+								.programm__day
+									.programm__day-title
+										span Гости
+										| / День 1
+									ul.programm__list
+										li.programm__list-item Знакомство. Основы организации ресторана / бара
+										li.programm__list-item Что такое ресторан? Чего хотят гости?
+										li.programm__list-item Стандартизация всех процессов в ресторане
+										li.programm__list-item Эффективное управление сменой
+										li.programm__list-item Решение конфликтных ситуаций.
+										li.programm__list-item.programm__list-item_imp Стажировка: Работа на кухне
+
+								.programm__day
+									.programm__day-title
+										span Сотрудники
+										| / День 2
+									ul.programm__list
+										li.programm__list-item Дисциплина в ресторане
+										li.programm__list-item Как искать "звезд" или правильный набор сотрудников
+										li.programm__list-item Построение системы обучения
+										li.programm__list-item Мотивация сотрудников
+										li.programm__list-item.programm__list-item_imp Экскурсия: Работа бара
+
+								.programm__day
+									.programm__day-title
+										span Деньги
+										| / День 3
+									ul.programm__list
+										li.programm__list-item Увеличение выручки, как игра
+										li.programm__list-item Оптимизация расходов
+										li.programm__list-item Основное о работе с себестоимостью.
+										li.programm__list-item Инвентаризация
+										li.programm__list-item Эффективное расписание
+
+										li.programm__list-item.programm__list-item_imp Стажировка: Открытие ресторана с менеджером
+										li.programm__list-item.programm__list-item_imp Сдача теста
+
+							.programm__col.programm__col_second
+
+								.programm__total
+									.programm__price 40 000 -
+									a.programm__button.button.button_primary(href="#") записаться на курс
+
+
+
+					#tab-4.tabs__tab
+
+						.programm__days
+							.programm__col
+								.programm__day
+									.programm__day-title
+										span Гости
+										| / День 1
+									ul.programm__list
+										li.programm__list-item Знакомство. Основы организации ресторана / бара
+										li.programm__list-item Что такое ресторан? Чего хотят гости?
+										li.programm__list-item Стандартизация всех процессов в ресторане
+										li.programm__list-item Эффективное управление сменой
+										li.programm__list-item Решение конфликтных ситуаций.
+										li.programm__list-item.programm__list-item_imp Стажировка: Закрытие бара.
+
+								.programm__day
+									.programm__day-title
+										span Сотрудники
+										| / День 2
+									ul.programm__list
+										li.programm__list-item Дисциплина в ресторане
+										li.programm__list-item Как искать "звезд" или правильный набор сотрудников
+										li.programm__list-item Построение системы обучения
+										li.programm__list-item Мотивация сотрудников
+										li.programm__list-item.programm__list-item_imp Экскурсия: Работа концептуального бара
+
+								.programm__day
+									.programm__day-title
+										span Деньги
+										| / День 3
+									ul.programm__list
+										li.programm__list-item Увеличение выручки, как игра
+										li.programm__list-item Оптимизация расходов
+										li.programm__list-item Основное о работе с себестоимостью.
+										li.programm__list-item Инвентаризация
+										li.programm__list-item Эффективное расписание
+										li.programm__list-item.programm__list-item_imp Стажировка: Открытие бара. Барменеджемент
+										li.programm__list-item.programm__list-item_imp Сдача теста
+
+							.programm__col.programm__col_second
+
+								.programm__total
+									.programm__price 40 000 -
+									a.programm__button.button.button_primary(href="#") записаться на курс
+
+
+
+mixin programm-insider-pro()
+	section.programm&attributes(attributes)
+		.programm__in.container
+			.programm__row.row
+				h2.programm__title Программа курса
+				.programm__text
+					p Каждый день теория, а после ужин в одном из популярных мест Москвы вместе с владельцем / директором или шефом этого ресторана
+				.programm__control
+					.programm__days
+						.programm__col
+							.programm__day
+								.programm__day-title
+									span Подбор персонала поколения «У»
+								ul.programm__list
+									li.programm__list-item Как составить правильное объявление о наборе персонала, опираясь на ценности?
+									li.programm__list-item Как создать правильный имидж компании и что такое HR-бренд?
+									li.programm__list-item Основные источники привлечения кандидатов поколения Y
+									li.programm__list-item Виды собеседований от телефонного до ассистента
+									li.programm__list-item Работа с рекомендациями
+
+							.programm__day
+								.programm__day-title
+									span Управление себестоимостью стратегически
+								ul.programm__list
+									li.programm__list-item Анализ потребительской способности и игры с ней
+									li.programm__list-item Ассортиментная матрица.
+									li.programm__list-item Позиции якорь и маржинальные топы
+									li.programm__list-item Эффективные сторонние инвестиции
+									li.programm__list-item Оперативный анализ и контроль цен и ассортимента
+									li.programm__list-item Минимально - необходимое количество для бесперебойной работы
+
+
+						.programm__col.programm__col_second
+							.programm__day
+								.programm__day-title
+									span Стратегический маркетинг
+
+								.programm__sub-title Продукт и бренд:
+
+								ul.programm__list
+									li.programm__list-item Реальный анализ рынка. Как его делать эффективно?
+									li.programm__list-item Позиционирование. Для чего оно нужно и откуда взять «золотую середину»?
+									li.programm__list-item Фирменный стиль: как стать не только уникальным, но и востребованным?
+
+								.programm__sub-title Стратегия и тактика:
+
+								ul.programm__list
+									li.programm__list-item Возможности - основные критерии поиска современных путей развития.
+									li.programm__list-item Решения - принципы разработки актуальных и успешных решений.
+
+							.programm__day
+								.programm__day-title
+									span Налоговое планирование и оптимизация
+								ul.programm__list
+									li.programm__list-item Ищем оптимальный компромисс между разумным желанием заплатить налоги и спать спокойно и естественным желанием зарабатывать как можно больше.
+									li.programm__list-item Как правильно оценить риски, последствия и выбрать правильную налоговую стратегию.
+									li.programm__list-item Варианты существующего налогообложения, как сделать выбор так, чтобы, как минимум, не платить лишнего.
+									li.programm__list-item Варианты оптимизации, их риски и эффективность.
+
+							.programm__total
+								.programm__price 77 000 -
+								a.programm__button.button.button_primary(href="#") записаться на курс
+
+
+
