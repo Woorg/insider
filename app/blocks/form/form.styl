@@ -1,14 +1,22 @@
 .form
 	display block
+	div.wpcf7-response-output
+		margin 0
 	&__row
 		display flex
 		flex-flow row wrap
 		justify-content flex-start
+		+r($tL)
+			justify-content space-between
 	&__field
-		margin-right 18px
+		margin-right 15px
+		max-width 31%
+		+r($tL)
+			margin-right 0
+			margin-bottom 19px
+			max-width 100%
 		&:last-child
 			margin-right 0
-	// &__field_submit
 
 	&__input
 		border 1px solid #c2c2c2
@@ -18,7 +26,6 @@
 		height 52px
 		color #7f7f7f
 		font-size 16px
-
 		+placeholder()
 			color #7f7f7f
 
@@ -26,4 +33,7 @@
 		height 52px
 		font-size 14px
 		font-family $rB
+		text-indent 0
+		&:hover
+			text-indent 0
 

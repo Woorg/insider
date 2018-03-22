@@ -7,13 +7,20 @@
 	&__in
 		padding-top 45px
 		padding-bottom 60px
-	// &__row
-
+		+r($t)
+			padding-top 30px
+			padding-bottom 30px
+	&__row
+		+r($tL)
+			margin-left 0
+			margin-right 0
 	&__title
 		margin-bottom 10px
 		@extends .title-h1
 		color #000
 		letter-spacing tracking(-40)
+		+r($tL)
+			margin-bottom 0
 	&__text
 		margin-bottom 0
 		max-width 200px
@@ -40,11 +47,21 @@
 		position relative
 		padding-top 32.7368421052632%
 		max-height 510px
+		+r($d)
+			min-height 510px
+		+r($tL)
+			padding-top 0
+			min-height 366px
 	&__address-w
 		position absolute
 		top 0
 		right 0
 		min-height auto
+		+r($tL)
+			top auto
+			left 0
+			bottom 0
+			min-height 180px
 	&__address
 		position absolute
 		z-index 1
@@ -60,11 +77,26 @@
 		color #000
 		text-align left
 		box-shadow 0 0 32px rgba(0, 0, 0, 0.11)
+		+r($tL)
+			top auto
+			bottom 20px
+			left 15px
+			right 15px
+			padding-top 20px
+			padding-left 20px
+			padding-right 20px
+			padding-bottom 20px
+			width auto
+			min-height 120px
+		+r($mS)
+			width 86%
 	&__address-title
 		margin-bottom 15px
 		font-family $s
 		font-size 32px
 		line-height 1.71875
 		text-transform uppercase
-	// &__address-text
+		+r($tL)
+			margin-bottom 5px
+			font-size 24px
 

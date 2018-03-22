@@ -1,20 +1,88 @@
 .nav
-	&__list
-		margin-bottom 0
-		display flex
-		flex-flow row wrap
-		justify-content flex-start
-		align-items center
+	&__checkbox
+		display none
+		&:checked +
+			.nav-list
+				+r($d)
+					display block
+	&__trigger-w
+		position relative
+		margin-top 14px
+		outline-style none
+		border none
+		display none
+		background none
+		cursor pointer
+		tr(all .2s cubic-bezier(.7,0,.3,1))
+		+r($d)
+			display block
+		+r($tL)
+			margin-left 15px
+		+r($m)
+			margin-left 0
+	&__trigger-w_active
+		tr(all .2s cubic-bezier(.7,0,.3,1))
+		.nav__trigger-item
+			position relative
+			tr(all .2s cubic-bezier(.7,0,.3,1))
+			&:first-child
+				transform rotate(-45deg) translateX(-12px)
+			&:nth-child(2)
+				opacity 0
+				visibility hidden
+			&:last-child
+				transform rotate(45deg) translateX(-12px) translateX(1px)
+	&__trigger-item
+		margin-bottom 6px
+		display block
+		width 28px
+		height 2px
+		box-shadow 0 0 32px rgba(0, 0, 0, .24)
+		background-color #dc324d
+		opacity 1
+		tr(all .2s cubic-bezier(.7,0,.3,1))
+		&:last-child
+			margin-bottom 0
+.nav-list
+	margin-bottom 0
+	display flex
+	flex-flow row wrap
+	justify-content flex-start
+	align-items center
+	+r($d)
+		position absolute
+		top 34px
+		left 0
+		right 0
+		padding-top 23px
+		padding-right 25px
+		padding-left 25px
+		padding-bottom 80px
+		display none
+		background #000
+	+r($tL)
+		padding-left 15px
+		padding-right 15px
 	&__item
+		+r($d)
+			margin auto
+			max-width 970px
+
 		&:first-child
 			.nav__link
 				padding-left 0
 				padding-right 30px
+				+r($d)
+					padding-left 0
+					padding-right 0
 	&__item_course
 		position relative
 		background #FFF
 		box-shadow 17px 0px 32px rgba(0,0,0,0.24)
 		background-color #dc324d
+		+r($d)
+			background none
+			box-shadow none
 		&:after
 			position absolute
 			z-index 1
@@ -25,16 +93,48 @@
 			background #FFF
 			content ''
 			transform translateY(-50%)
-		.nav__link
-			padding-left 23px
-			padding-right 25px
-	&__item_course_pro
-			&:after
+			+r($d)
 				display none
-	.nav__item_course_pro
-		.nav__link
+				color #dc324d
+				background #dc324d
+		.nav-list__link
 			padding-left 23px
 			padding-right 25px
+			+r($d)
+				padding-left 0
+				padding-right 0
+				color #dc324d
+				font-family $rB
+				font-size 22px
+				line-height 2.181
+				&:hover
+					color #dc324d
+					span
+						&:after
+							background #dc324d
+	&__item_course_pro
+		position relative
+		background #FFF
+		box-shadow 17px 0px 32px rgba(0,0,0,0.24)
+		background-color #dc324d
+		+r($d)
+			background none
+			box-shadow none
+		&:after
+			display none
+		.nav-list__link
+			padding-left 23px
+			padding-right 25px
+			+r($d)
+				padding-left 0
+				padding-right 0
+				font-family $rB
+				color #dc324d
+				&:hover
+					color #dc324d
+					span
+						&:after
+							background #dc324d
 	&__link
 		padding-top 11px
 		padding-right 16px
@@ -43,6 +143,13 @@
 		display block
 		color #FFF
 		line-height 2
+		+r($d)
+			padding-top 0
+			padding-right 0
+			padding-bottom 0
+			padding-left 0
+			font-size 22px
+			line-height 2.181
 		span
 			position relative
 			padding-bottom 2px
@@ -50,23 +157,29 @@
 			vertical-align middle
 			line-height 1
 			&:after
-					position absolute
-					top 100%
-					left 0
-					width 100%
-					height 2px
-					background transparent
-					content ''
-					tr(all .3s ease)
+				position absolute
+				top auto
+				bottom -2px
+				left 50%
+				display block
+				width 0
+				height 2px
+				background white
+				content ''
+				tr(all .7s cubic-bezier(.7,0,.3,1))
+				will-change width
 		&:hover
 			color #FFF
 			text-decoration none
 			span
 				&:after
 					position absolute
-					top 100%
 					left 0
 					width 100%
 					height 2px
 					background #FFF
 					content ''
+					tr(all .7s cubic-bezier(.7,0,.3,1))
+					will-change width
+
+

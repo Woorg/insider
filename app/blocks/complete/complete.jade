@@ -1,12 +1,15 @@
 mixin complete()
 	section.complete&attributes(attributes)
-		.complete__in.container
+		.complete__in.container.wow.fadeInUp(data-wow-duration='1.5s')
 			.complete__row.row
-				.complete__col.col-md-5
+				.complete__col.col-md-5.col-sm-12.col-xs-12
 					.complete__image
 						img(src="assets/images/content/end-img.png", alt="")
-				.complete__col.complete__col_second.col-md-7
-					h2.complete__title По окончанию обучения вы получите
+				.complete__col.complete__col_second.col-md-7.col-sm-12.col-xs-12
+
+					h2.complete__title.wow.break-lines(data-wow-duration='1.5s'  data-wow-delay='1s')
+						.break-lines__inner По окончанию обучения вы получите
+
 					ul.complete__list
 						li.complete__item Доступ в закрытую группу выпускников курса
 						li.complete__item Особые условия на консультационную поддержку и участия в других проектах

@@ -1,25 +1,32 @@
 .programm
 	display block
+	overflow hidden
 	&_second
 		.programm__text
 			max-width 610px
 	&__in
 		padding-top 50px
-		padding-bottom 128px
-
-	// &__row
-	// 	margin-left 0
-	// 	margin-right 0
-
+		padding-bottom 50px
+		+r($tL)
+			padding-top 30px
+			padding-bottom 57px
+	&__row
+		+r($tL)
+			margin-left 0
+			margin-right 0
 	&__title
 		margin-bottom 26px
 		@extends .title-h1
 		letter-spacing tracking(-30)
+		+r($tL)
+			margin-bottom 16px
 	&__text
 		margin-bottom 18px
 		max-width 850px
 		font-size 16px
 		line-height 1.5
+		+r($tL)
+			margin-bottom 10px
 	&__control-title
 		margin-right 10px
 		display inline-block
@@ -28,51 +35,64 @@
 		font-family $s
 		font-size 24px
 		text-transform uppercase
+		+r($tL)
+			margin-bottom 10px
+			font-size 18px
 	&__control-nav
 		margin-bottom 32px
 		padding-left 10px
+		+r($tL)
+			padding-left 0
 	&__days
 		margin-left 5px
-
 		display flex
 		flex-flow row wrap
 		justify-content space-between
 		align-items stretch
+		+r($t)
+			justify-content flex-start
 	&__col
 		width 570px
 		width ratio-percentage(570, 1140)
+		+r($t)
+			width auto
 		.programm__day
 			&:last-child
 				&:after
-					// top -28px
-					// height calc(100% - 87px )
 					height 50%
 					background #DA3D45 url('../images/general/day-last-bottom.png') 0 100% no-repeat
+					+r($t)
+						top 0
+						height 100%
+						background #DA3D45
 	&__col_second
+		+r($t)
+			width auto
 		.programm__day
 			&:first-child
 				&:after
 					top -38px
 					height 48px
 					background #DA3D45 url('../images/general/day-last-top.png') 0 0 no-repeat
+					+r($t)
+						top 0
+						height 100%
+						background #DA3D45
 			&:nth-child(2)
 				&:after
-					// top calc(-100% + 22px)
 					top calc(-100% + 2px)
-
 					height 100%
-					// height 93%
 					background #DA3D45
+					+r($t)
+						display none
 	&__day
 		position relative
 		padding-left 30px
 		padding-bottom 20px
-		// min-height 264px
 		min-height 200px
 		&:before
 			position absolute
 			z-index 1
-			// top 10px
 			top 0
 			left -10px
 			border 4px solid #da3d45
@@ -90,7 +110,6 @@
 			width 3px
 			height 100%
 			background #DA3D45
-
 	&__day-title
 		position relative
 		margin-top 0
@@ -99,22 +118,20 @@
 		font-family $rR
 		font-size 28px
 		line-height 1.1
+		+r($t)
+			font-size 24px
 		span
 			margin-right 5px
 			color #000
 			font-family $rEb
-
 	&__sub-title
 		margin-bottom 10px
 		color #000
 		font-family $rB
 		line-height 1.428
-
 	&__list
 		margin-left 0
-		// margin-bottom 30px
 		margin-bottom 0
-
 	&__list-item
 		position relative
 		margin-bottom 12px
@@ -122,7 +139,6 @@
 		line-height 1.4
 		&:after
 			position absolute
-			// top 50%
 			top 6px
 			left 0
 			width 4px
@@ -130,19 +146,14 @@
 			content ''
 			background-color #dc324d
 			border-radius 50%
-			transform translateY(-50%)
+			// transform translateY(-50%)
 			transform none
-
 	&__list-item_imp
 		color #dc324d
-
 	&__total
 		padding-left 20px
 		font-size 36px
 		font-family $rSb
 		line-height 1
-
 	&__price
 		margin-bottom 34px
-
-	// &__button

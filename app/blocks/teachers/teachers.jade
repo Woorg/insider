@@ -1,8 +1,9 @@
 mixin teachers()
 	section.teachers&attributes(attributes)
-		.teachers__in.container
+		.teachers__in.container.wow.fadeInUp(data-wow-duration='1.5s')
 			.teachers__row.row
-				h2.teachers__title Преподаватели
+				h2.teachers__title.wow.break-lines(data-wow-duration='1.5s'  data-wow-delay='1s')
+					.break-lines__inner Преподаватели
 				ul.teachers__slider
 					li.teachers__slide.teacher
 						.teachers__col.teachers__col_wide
@@ -61,74 +62,124 @@ mixin teachers-second()
 
 					ul.teachers__list
 						li.teachers__teacher.teacher
-							.teacher__image
-								img(src="assets/images/content/teacher-img-1.png", alt="")
-							.teacher__title Дмитрий Левицкий
-							a.teacher__more(href="#") Подробнее
+							a.teacher__link(href="#popup")
+								.teacher__image
+									img(src="assets/images/content/teacher-photo-1.jpg", alt="")
+								.teacher__title Андрей Петров
+								.teacher__text Президент Профессионального Ресторанного Альянса «РЕАЛ», основатель Группы Компаний HURMA
 						li.teachers__teacher.teacher
-							.teacher__image
-								img(src="assets/images/content/teacher-img-1.png", alt="")
-							.teacher__title Дмитрий Левицкий
-							a.teacher__more(href="#") Подробнее
-						li.teachers__teacher.teacher
-							.teacher__image
-								img(src="assets/images/content/teacher-img-1.png", alt="")
-							.teacher__title Дмитрий Левицкий
-							a.teacher__more(href="#") Подробнее
-						li.teachers__teacher.teacher
-							.teacher__image
-								img(src="assets/images/content/teacher-img-1.png", alt="")
-							.teacher__title Дмитрий Левицкий
-							a.teacher__more(href="#") Подробнее
+							a.teacher__link(href="#popup")
+								.teacher__image
+									img(src="assets/images/content/teacher-photo-2.jpg", alt="")
+								.teacher__title Сергей Веретенников
+								.teacher__text Руководитель направления тренинга и консалтинга в HURMA Management Group. Совладелец 4х ресторанов в Москве
 
 						li.teachers__teacher.teacher
-							.teacher__image
-								img(src="assets/images/content/teacher-img-1.png", alt="")
-							.teacher__title Дмитрий Левицкий
-							a.teacher__more(href="#") Подробнее
+							a.teacher__link(href="#popup")
+								.teacher__image
+									img(src="assets/images/content/teacher-photo-3.jpg", alt="")
+								.teacher__title Андрей Петров
+								.teacher__text Бар-менеджер в ресторане Meat Puppets  Совладелец бара "Петров и Васечка".  С 2013 года является консультантом и тренером в составе Hurma Managment Group.
 
 						li.teachers__teacher.teacher
-							.teacher__image
-								img(src="assets/images/content/teacher-img-1.png", alt="")
-							.teacher__title Дмитрий Левицкий
-							a.teacher__more(href="#") Подробнее
+							a.teacher__link(href="#popup")
+								.teacher__image
+									img(src="assets/images/content/teacher-photo-4.jpg", alt="")
+								.teacher__title Сергей Веретенников
+								.teacher__text Шеф-барменеджер сети «Дорогая, я перезвоню». Так же является директором "дорогой' на Новокузнецкой.
 
 						li.teachers__teacher.teacher
-							.teacher__image
-								img(src="assets/images/content/teacher-img-1.png", alt="")
-							.teacher__title Дмитрий Левицкий
-							a.teacher__more(href="#") Подробнее
+							a.teacher__link(href="#popup")
+								.teacher__image
+									img(src="assets/images/content/teacher-photo-5.jpg", alt="")
+								.teacher__title Игорь Пантилеев
+								.teacher__text Управляющий рестораном Meat Puppets и крафтового бара Fckng craft Pub
 
 						li.teachers__teacher.teacher
-							.teacher__image
-								img(src="assets/images/content/teacher-img-1.png", alt="")
-							.teacher__title Дмитрий Левицкий
-							a.teacher__more(href="#") Подробнее
+							a.teacher__link(href="#popup")
+								.teacher__image
+									img(src="assets/images/content/teacher-photo-6.jpg", alt="")
+								.teacher__title Юрий Быченков
+								.teacher__text Управляющий секретного бара "Take it easy, darling"
+
+						li.teachers__teacher.teacher
+							a.teacher__link(href="#popup")
+								.teacher__image
+									img(src="assets/images/content/teacher-photo-7.jpg", alt="")
+								.teacher__title Геннадий Овечкин
+								.teacher__text Директор бара сети "Дорогая, я перезвоню"на Маяковской.
+
+						li.teachers__teacher.teacher
+							a.teacher__link(href="#popup")
+								.teacher__image
+									img(src="assets/images/content/teacher-photo-8.jpg", alt="")
+								.teacher__title Илья Грибенко
+								.teacher__text Шеф-барменеджер сети «Дорогая, я перезвоню». Так же является директором "дорогой' на Новокузнецкой.
+
+						li.teachers__teacher.teacher
+							a.teacher__link(href="#popup")
+								.teacher__image
+									img(src="assets/images/content/teacher-photo-9.jpg", alt="")
+								.teacher__title Дарья Кондратьева
+								.teacher__text Тренинг-менеджер сети "Дорогая, я перезвоню"
+
+						li.teachers__teacher.teacher
+							a.teacher__link(href="#popup")
+								.teacher__image
+									img(src="assets/images/content/teacher-photo-10.jpg", alt="")
+								.teacher__title Дмитрий Оленин
+								.teacher__text Бар-менеджер бара сети "Дорогая я перезвоню"
+
+						li.teachers__teacher.teacher
+							a.teacher__link(href="#popup")
+								.teacher__image
+									img(src="assets/images/content/teacher-photo-11.jpg", alt="")
+								.teacher__title Виолетта Сергеева
+								.teacher__text Менеджер по персоналу в баре "Дорогая, я перезвоню" на Китай-городе
+
+						li.teachers__teacher.teacher
+							a.teacher__link(href="#popup")
+								.teacher__image
+									img(src="assets/images/content/teacher-photo-12.jpg", alt="")
+								.teacher__title Сергей Устинов
+								.teacher__text Китчен-менеджер бара "Дорогая, я перезвоню" на Новокузнецкой.
+
+						li.teachers__teacher.teacher
+							a.teacher__link(href="#popup")
+								.teacher__image
+									img(src="assets/images/content/teacher-photo-13.jpg", alt="")
+								.teacher__title Светлана Купрейчик
+								.teacher__text Тренинг-менеджер сети баров "Дорогая, я перезвоню"
+
 
 				#tab-2.tabs__tab
 
 					ul.teachers__list
-						li.teachers__teacher.teacher
-							.teacher__image
-								img(src="assets/images/content/teacher-img-1.png", alt="")
-							.teacher__title Дмитрий Левицкий
-							a.teacher__more(href="#") Подробнее
-						li.teachers__teacher.teacher
-							.teacher__image
-								img(src="assets/images/content/teacher-img-1.png", alt="")
-							.teacher__title Дмитрий Левицкий
-							a.teacher__more(href="#") Подробнее
-						li.teachers__teacher.teacher
-							.teacher__image
-								img(src="assets/images/content/teacher-img-1.png", alt="")
-							.teacher__title Дмитрий Левицкий
-							a.teacher__more(href="#") Подробнее
-						li.teachers__teacher.teacher
-							.teacher__image
-								img(src="assets/images/content/teacher-img-1.png", alt="")
-							.teacher__title Дмитрий Левицкий
-							a.teacher__more(href="#") Подробнее
 
+						li.teachers__teacher.teacher
+							a.teacher__link(href="#popup")
+								.teacher__image
+									img(src="assets/images/content/teacher-photo-10.jpg", alt="")
+								.teacher__title Дмитрий Оленин
+								.teacher__text Бар-менеджер бара сети "Дорогая я перезвоню"
 
+						li.teachers__teacher.teacher
+							a.teacher__link(href="#popup")
+								.teacher__image
+									img(src="assets/images/content/teacher-photo-11.jpg", alt="")
+								.teacher__title Виолетта Сергеева
+								.teacher__text Менеджер по персоналу в баре "Дорогая, я перезвоню" на Китай-городе
 
+						li.teachers__teacher.teacher
+							a.teacher__link(href="#popup")
+								.teacher__image
+									img(src="assets/images/content/teacher-photo-12.jpg", alt="")
+								.teacher__title Сергей Устинов
+								.teacher__text Китчен-менеджер бара "Дорогая, я перезвоню" на Новокузнецкой.
 
+						li.teachers__teacher.teacher
+							a.teacher__link(href="#popup")
+								.teacher__image
+									img(src="assets/images/content/teacher-photo-13.jpg", alt="")
+								.teacher__title Светлана Купрейчик
+								.teacher__text Тренинг-менеджер сети баров "Дорогая, я перезвоню"

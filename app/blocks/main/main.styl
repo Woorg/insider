@@ -1,13 +1,30 @@
 .main
+	overflow hidden
 	&__in
 		padding-top 130px
-	// &__row
-
+		+r($tL)
+			padding-top 40px
+		+r($t)
+			padding-top 10px
+		+r($m)
+			padding-top 30px
+	&__row
+		+r($tL)
+			margin-left 0
+			margin-right 0
 	&__title
 		position relative
 		margin-bottom 92px
 		@extends .title-h1
 		color #FFF
+		+r($tL)
+			margin-bottom 60px
+		+r($t)
+			margin-bottom 60px
+		+r($m)
+			margin-bottom 60px
+		+r($mS)
+			margin-bottom 30px
 		&:after
 			position absolute
 			z-index -1
@@ -20,3 +37,5 @@
 			line-height 1
 			color rgba(255,255,255, .1)
 			text-transform uppercase
+	&__title_invert
+		color #000

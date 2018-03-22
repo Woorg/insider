@@ -1,8 +1,9 @@
 mixin participation()
 	.participation&attributes(attributes)
-		.participation__in.container
+		.participation__in.container.wow.fadeInUp(data-wow-duration='1.5s')
 			.participation__row.row
-				h2.participation__title Варианты участия
+				h2.participation__title.wow.break-lines(data-wow-duration='1.5s'  data-wow-delay='1s')
+					.break-lines__inner Варианты участия
 
 			.participation__cols.row
 				.col-md-6
@@ -15,7 +16,7 @@ mixin participation()
 
 							.participation__price 77 000 -
 
-							a.participation__button.button.button_primary(href="#") записаться на курс
+							a.participation__button.button.button_primary(href="#" data-text="записаться на курс") записаться на курс
 
 				.col-md-6
 					.participation__item
@@ -27,7 +28,7 @@ mixin participation()
 
 							.participation__price Командой дешевле
 
-							a.participation__button.button.button_primary(href="#") записаться на курс
+							a.participation__button.button.button_primary(href="#" data-text="записаться на курс") записаться на курс
 
 			.participation__note
 				p Оплатить участие можно наличными, безналом или онлайн — картой и электронными деньгами. По всем вопросам звоните +7 967 696-99-20 или пишите chegonado@vsyahurma.ru

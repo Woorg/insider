@@ -1,18 +1,23 @@
 .teachers
+	overflow hidden
 	&_second
 		.teachers__in
 			padding-top 23px
 			padding-bottom 57px
+			+r($t)
+				padding-top 40px
+			+r($mS)
+				padding-top 60px
 		.teachers__row
 			margin-left 0
 			margin-right 0
-
 		.teachers__tabs-nav
 			margin-bottom 50px
 			text-align center
-
 		.tabs__link
 			font-size 28px
+			+r($tL)
+				font-size 18px
 		.teachers__list
 			margin-bottom 0
 			display flex
@@ -23,9 +28,23 @@
 			margin-bottom 50px
 			width 265px
 			width ratio-percentage(265,1140)
+			cursor pointer
+			+r($tL)
+				width 31%
+			+r($t)
+				width 50%
+			+r($m)
+				width auto
 		.teacher
 			padding-top 0
 			text-align center
+		.teacher__link
+			display block
+			color initial
+			&:hover,
+			&:focus
+				outline none
+				text-decoration none
 		.teacher__title
 			margin-top 0
 			margin-bottom 10px
@@ -35,27 +54,23 @@
 			line-height 1
 		.teacher__text
 			max-height 156px
-
 		.teacher__image
 			position relative
 			z-index 1
 			margin auto
 			margin-bottom 17px
-			width 189px
+			padding 18px
+			size(177px)
+			box-shadow 0 0 27px rgba(0, 0, 0, 0.14)
+			border-radius 89px
+			background-color #ffffff
 			text-align center
 			&:after
-				position absolute
-				z-index -1
-				top 0
-				left 0
-				width 202px
-				height 202px
-				background-color #dc324d
-				border-radius 50%
-				content ''
+				display none
 			img
-				margin-top -15px
+				margin-top 0
 				display inline-block
+				border-radius 50%
 		.teacher__more
 			position relative
 			padding-bottom 2px
@@ -74,10 +89,17 @@
 			&:hover
 				color #333
 				text-decoration none
-
+		.teacher__text
+			font-size 13px
+			line-height 1.538
 	&__in
 		padding-top 134px
 		padding-bottom 84px
+		+r($tL)
+			padding-top 60px
+			padding-bottom 40px
+		+r($m)
+			padding-bottom 10px
 	&__row
 		position relative
 		margin-left 0
@@ -88,22 +110,46 @@
 	&__slider
 		margin-left 65px
 		margin-right 65px
+		clr()
+		+r($tL)
+			margin-left 0
+			margin-right 0
+			min-height 600px
+		+r($m)
+			min-height 740px
 	&__slide
 		clr()
-
 	&__col
 		padding-left 30px
 		float left
 		width 438px
+		width ratio-percentage(438, 1140)
+		+r($tL)
+			padding-top 40px
+			padding-left 0
+			width 100%
+			min-height 200px
+			float none
+		+r($m)
+			padding-top 90px
 	&__col_wide
 		padding-top 66px
 		padding-left 0
 		width 568px
+		width ratio-percentage(568, 1140)
+		+r($tL)
+			padding-top 0
+			width 100%
 	&__image
 		position relative
 		z-index 1
 		width 358px
 		text-align center
+		+r($tL)
+			margin auto
+		+r($m)
+			margin auto
+			width 242px
 		&:after
 			position absolute
 			z-index -1
@@ -114,6 +160,9 @@
 			background url('../images/general/teacher-circle.jpg') 0 0 / cover no-repeat
 			border-radius 50%
 			content ''
+			+r($m)
+				width 257px
+				height 257px
 		img
 			margin-top -15px
 			display inline-block
@@ -121,27 +170,32 @@
 		position absolute
 		bottom 130px
 		left 70px
-		width 133px
+		width 143px
 		display flex
 		flex-flow row wrap
 		justify-content space-between
 		align-items center
+		+r($tL)
+			position static
+			bottom 0
+			left 0
+		+r($m)
+			position absolute
+			bottom 400px
 	&__nav
-		width 80px
+		width 90px
 		display flex
 		flex-flow row wrap
 		justify-content space-between
 		align-items center
-	// &__count
-
-
 	.slick-arrow
 		position relative
 		border 2px solid #dc324d
-		left 0
-		right 0
-		width 36px
-		height 36px
+		left 0 !important
+		right 0 !important
+		margin 0
+		width 34px
+		height 34px
 		background-color #ffffff
 		transform none
 		opacity .3
@@ -155,13 +209,10 @@
 			retinaSprite($slider_arrow_left_group)
 			transform translate(-50%, -50%)
 			content ''
-	.slick-next
-		opacity 1
-		&:before
-			transform translate(-50%, -50%) rotate(180deg)
-
-
-
+		&.slick-next
+			opacity 1
+			&:before
+				transform translate(-50%, -50%) rotate(180deg)
 .teacher
 	padding-top 15px
 	&__title
@@ -171,13 +222,9 @@
 		font-family $rEb
 		font-size 42px
 		line-height 1
+		+r($tL)
+			font-size 28px
 	&__text
 		max-height 156px
-
-	// &__nav
-	// 	position relative
-	// 	width 80px
-	// 	display flex
-	// 	flex-flow row wrap
-	// 	justify-content space-between
-	// 	align-items center
+		+r($tL)
+			max-height 276px

@@ -1,8 +1,9 @@
 mixin graduates()
 	section.graduates&attributes(attributes)
-		.graduates__in.container
+		.graduates__in.container.wow.fadeInUp(data-wow-duration='1.5s')
 			.graduates__row.row
-				h2.graduates__title наши выпускники
+				h2.graduates__title.wow.break-lines(data-wow-duration='1.5s'  data-wow-delay='1s')
+					.break-lines__inner наши выпускники
 				ul.graduates__carousel
 					li.graduates__item
 						.graduates__photo(style="background-image: url('assets/images/content/graduates-img-1.jpg');")

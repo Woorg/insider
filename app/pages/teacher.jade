@@ -1,5 +1,7 @@
 extends /blocks/layout-default/layout-teachers
 
+include /blocks/preload/preload
+
 include /blocks/header/header
 include /blocks/hero/hero
 include /blocks/courses/courses
@@ -13,26 +15,29 @@ include /blocks/schedule/schedule
 include /blocks/map/map
 include /blocks/questions/questions
 
-
 include /blocks/teachers/teachers
 include /blocks/graduates/graduates
 include /blocks/video-reviews/video-reviews
 include /blocks/process/process
 
-
-
 include /blocks/footer/footer
+include /blocks/popup/popup
+
 
 
 block head
+
 	- var pageTitle = 'Hurma insider - Преподаватели';
 
 block content
+	+preload()
 	+header-third()
 	main.main
-		.main__in.container
+		.main__in.container.wow.fadeInUp(data-wow-duration='1.5s')
 			.main__row.row
-				h1.main__title(data-title='hurma insider') Преподаватели
+				h1.main__title.wow.break-lines(data-title='hurma insider')
+					.break-lines__line(data-wow-duration='1.5s' data-wow-delay='2s')
+						.break-lines__inner Преподаватели
 
 				+teachers-second().teachers_second
 
@@ -55,3 +60,5 @@ block content
 	//- +process()
 
 	+footer()
+
+	+popup().mfp-hide#popup

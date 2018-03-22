@@ -1,8 +1,9 @@
 mixin map()
 	.map&attributes(attributes)
-		.map__in.container
+		.map__in.container.wow.fadeInUp(data-wow-duration='1.5s')
 			.map__row.row
-				h2.map__title Наш адрес
+				h2.map__title.wow.break-lines(data-wow-duration='1.5s'  data-wow-delay='1s')
+					.break-lines__inner Наш адрес
 
 		.map__area-w
 			.map__area#map
@@ -16,7 +17,7 @@ mixin map()
 
 mixin map-second()
 	.map&attributes(attributes)
-		.map__in.container
+		.map__in.container.wow.fadeInUp(data-wow-duration='1.5s')
 			.map__row.row
 				h2.map__title Адрес
 				.map__text

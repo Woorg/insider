@@ -4,11 +4,23 @@
 	background-color #ffffff
 	color #FFF
 	box-shadow 0 0 32px rgba(0, 0, 0, 0.11)
+	+r($tL)
+		margin-bottom 32px
+		min-height auto
 	&_insider,
 	&_insider-pro
 		min-height 412px
 		box-shadow none
 		background none
+		overflow hidden
+		.course__in
+			+r($tL)
+				min-height 412px
+		.course__w
+			+r($tL)
+				padding-left 15px
+				padding-right 15px
+				transform translateY( calc(-50% + 17px) )
 		.course__title
 			margin-bottom 20px
 			@extends .title-h1
@@ -22,9 +34,13 @@
 			color #FFF
 		.course__info-item
 			font-size 20px
+			+r($tL)
+				margin-right 8px
+				padding-right 16px
+				font-size 18px
 			&:before
 				font-size 24px
-				transform translateY(calc(-50% - 4px))
+				transform translateY( calc(-50% - 4px) )
 	&__in
 		position relative
 		min-height 412px
@@ -34,7 +50,7 @@
 		top 50%
 		left 0
 		max-width 640px
-		transform translateY(calc(-50% - 7px))
+		transform translateY( calc(-50% - 7px) )
 		&:after
 			position absolute
 			z-index -1
@@ -55,11 +71,17 @@
 		padding-bottom 36px
 		padding-left 68px
 		background-size cover
+		+r($tL)
+			padding-top 52px
+			padding-right 30px
+			padding-left 30px
 	&__title
 		margin-top 0
 		margin-bottom 10px
 		font-family $rEb
 		font-size 42px
+		+r($m)
+			font-size 28px
 
 	&__info
 		margin-bottom 0
@@ -74,6 +96,9 @@
 		font-size 18px
 		line-height 1.8
 		text-transform uppercase
+		+r($m)
+			font-size 16px
+			line-height 2
 		&:last-child
 			&:before
 				display none
@@ -92,7 +117,7 @@
 			text-transform uppercase
 			line-height 1
 			opacity .3
-			transform translateY(calc(-50% - 1px))
+			transform translateY( calc(-50% - 1px) )
 			content '/'
 
 	&__body
@@ -100,6 +125,11 @@
 		padding-right 40px
 		padding-bottom 45px
 		padding-left 68px
+		+r($m)
+			padding-top 30px
+			padding-left 23px
+			padding-right 23px
+			padding-bottom 34px
 	&__text
 		margin-bottom 18px
 		color #333

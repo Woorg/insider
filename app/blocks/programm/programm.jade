@@ -2,9 +2,10 @@ include ../tabs/tabs
 
 mixin programm()
 	section.programm&attributes(attributes)
-		.programm__in.container
+		.programm__in.container.wow.fadeInUp(data-wow-duration='1.5s')
 			.programm__row.row
-				h2.programm__title Программа курса
+				h2.programm__title.wow.break-lines(data-wow-duration='1.5s'  data-wow-delay='1s')
+					.break-lines__inner Программа курса
 				.programm__text
 					p Курс обучения занимает 5 дней и состоит из теоретических занятий и практики — вы увидите своими глазами, как построена работа в каждом из  наших баров вместе с менеджерами нашей компании и сможете задать любые интересующие вас вопросы.
 				.programm__control.tabs
@@ -89,7 +90,7 @@ mixin programm()
 
 								.programm__total
 									.programm__price 77 000 -
-									a.programm__button.button.button_primary(href="#") записаться на курс
+									a.programm__button.button.button_primary(href="#" data-text="записаться на курс") записаться на курс
 
 
 					#tab-2.tabs__tab
@@ -146,7 +147,7 @@ mixin programm()
 
 								.programm__total
 									.programm__price 60 000 -
-									a.programm__button.button.button_primary(href="#") записаться на курс
+									a.programm__button.button.button_primary(href="#" data-text="записаться на курс") записаться на курс
 
 
 
@@ -195,7 +196,7 @@ mixin programm()
 
 								.programm__total
 									.programm__price 40 000 -
-									a.programm__button.button.button_primary(href="#") записаться на курс
+									a.programm__button.button.button_primary(href="#" data-text="записаться на курс") записаться на курс
 
 
 
@@ -243,15 +244,16 @@ mixin programm()
 
 								.programm__total
 									.programm__price 40 000 -
-									a.programm__button.button.button_primary(href="#") записаться на курс
+									a.programm__button.button.button_primary(href="#" data-text="записаться на курс") записаться на курс
 
 
 
 mixin programm-insider-pro()
 	section.programm&attributes(attributes)
-		.programm__in.container
+		.programm__in.container.wow.fadeInUp(data-wow-duration='1.5s')
 			.programm__row.row
-				h2.programm__title Программа курса
+				h2.programm__title.wow.break-lines(data-wow-duration='1.5s'  data-wow-delay='1s')
+					.break-lines__inner Программа курса
 				.programm__text
 					p Каждый день теория, а после ужин в одном из популярных мест Москвы вместе с владельцем / директором или шефом этого ресторана
 				.programm__control
@@ -308,7 +310,7 @@ mixin programm-insider-pro()
 
 							.programm__total
 								.programm__price 77 000 -
-								a.programm__button.button.button_primary(href="#") записаться на курс
+								a.programm__button.button.button_primary(href="#" data-text="записаться на курс") записаться на курс
 
 
 

@@ -1,5 +1,7 @@
 extends /blocks/layout-default/layout-insider
 
+include /blocks/preload/preload
+
 include /blocks/header/header
 include /blocks/hero/hero
 include /blocks/courses/courses
@@ -28,6 +30,7 @@ block head
 	- var pageTitle = 'Hurma insider - Курс основам управления для руководителей всех продразделений ресторана';
 
 block content
+	+preload()
 	+header-inner()
 	+course-insider().course_insider
 	+advantages-insider().advantages_second

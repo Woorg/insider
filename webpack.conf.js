@@ -35,7 +35,7 @@ export default function makeWebpackConfig({
 		bail: false,
 		profile: true,
 		output: {
-			path: path.resolve('./dist/assets/scripts/'),
+			path: path.resolve('../assets/scripts/'),
 			filename: 'app.min.js',
 			pathinfo: false
 		},
@@ -62,7 +62,9 @@ export default function makeWebpackConfig({
 				test: /\.js$/,
 				loader: 'eslint-loader',
 				exclude: /node_modules/
-			}, {
+			},
+
+			{
 				test: require.resolve('jquery'),
 				loader: 'expose?$!expose?jQuery'
 			}].filter(loader => loader)

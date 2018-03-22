@@ -1,35 +1,52 @@
 .process
-	display block
+	overflow hidden
 	&__in
 		padding-top 100px
 		padding-bottom 52px
+		+r($tL)
+			padding-top 57px
+		+r($m)
+			padding-bottom 33px
 	&__row
 		margin-left 0
 		margin-right 0
-
 	&__title
 		margin-bottom 20px
 		@extends .title-h1
+		+r($tL)
+			margin-bottom 17px
 	&__text
 		margin-bottom 50px
 		max-width 860px
 		font-size 20px
 		line-height 1.4
+		+r($tL)
+			margin-bottom 35px
+			font-size 17px
 	&__photos
 		margin-bottom 27px
 		display flex
 		flex-flow row wrap
 		justify-content space-between
+		+r($tL)
+			justify-content space-around
+		+r($t)
+			margin-bottom 0
+			justify-content center
 	&__photo
 		width 267px
 		height 267px
+		+r($tL)
+			margin-bottom 20px
+			width 25%
+		+r($t)
+			width auto
 	&__photo-link
 		display block
 		text-decoration none
 	&__more-w
 		text-align center
-
 	&__more
-		margin-left -17px
-		font-size 16px
-
+		margin-left 0
+		+r($m)
+			padding-top 0

@@ -1,14 +1,27 @@
+.complete-w
+	padding-top 30px
+	overflow hidden
 .complete
 	background-color #f7f7f7
-	// &__in
-
-	// &__row
-
-	// &__col
+	&__w
+		overflow hidden
+	&__in
+		+r($tL)
+			padding-top 60px
+	&__row
+		+r($tL)
+			display flex
+			flex-flow row wrap
+			justify-content space-between
+	&__col
+		+r($d)
+			order 2
 
 	&__col_second
 		margin-left -45px
-
+		+r($d)
+			margin-left 0
+			order 1
 	&__image
 		position relative
 		z-index 1
@@ -16,9 +29,18 @@
 		margin-top -58px
 		margin-left -14px
 		text-align center
+		+r($tL)
+			top 0
+			margin-top 0
+			margin-left 0
+		+r($m)
+			margin auto
+			width 202px
 		img
 			margin-top -6px
 			display inline-block
+			+r($m)
+				margin-right -40px
 
 		&:after
 			position absolute
@@ -30,19 +52,34 @@
 			background url('../images/general/end-circle.jpg') 0 0 / cover no-repeat
 			border-radius 50%
 			content ''
+			+r($tL)
+				left 50%
+				transform translateX(-50%)
+			+r($m)
+				top 62px
+				width 231px
+				height 231px
 	&__title
 		margin-top 92px
 		margin-right -20px
 		margin-bottom 15px
 		@extends .title-h1
+		+r($tL)
+			margin-top 0
+			margin-right 0
 	&__list
 		margin-left 10px
+		+r($m)
+			margin-left 0
 	&__item
 		position relative
 		margin-bottom 16px
 		padding-left 23px
 		font-size 16px
 		line-height 1.5
+		+r($m)
+			padding-left 17px
+			font-size 14px
 		&:after
 			position absolute
 			top 8px

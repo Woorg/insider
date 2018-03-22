@@ -5,15 +5,27 @@
 	&__in
 		padding-top 90px
 		padding-bottom 18px
+		+r($tL)
+			padding-top 57px
+			padding-bottom 38px
+	&__row
+		+r($tL)
+			margin-left 0
+			margin-right 0
 	&__cols
 		margin-bottom 22px
 		display flex
+		flex-flow row wrap
 		align-items stretch
-
+		+r($tL)
+			justify-content space-between
+			align-items flex-start
 	&__title
 		margin-bottom 54px
 		@extends .title-h1
 		color #000
+		+r($tL)
+			margin-bottom 40px
 	&__item
 		position relative
 		margin-left -15px
@@ -21,25 +33,41 @@
 		background-color #ffffff
 		color #FFF
 		box-shadow 0 0 32px rgba(0, 0, 0, 0.11)
+		tr(all .3s ease-out)
+		&:hover
+			tr(all .3s ease-out)
+			transform translateY(-5px)
+			box-shadow rgba(45,45,45,.05) 0 2px 2px, rgba(49,49,49,.05) 0 4px 4px, rgba(42,42,42,.05) 0 8px 8px, rgba(32,32,32,.05) 0 16px 16px, rgba(49,49,49,.05) 0 32px 32px, rgba(35,35,35,.05) 0 64px 64px
+		+r($tL)
+			margin-bottom 40px
+			margin-left 0
+			width auto
 		&:last-child
 			margin-right 15px
+			margin-bottom 20px
 	&__top
 		min-height 216px
 		background-size cover
-
+		+r($m)
+			min-height 120px
 	&__item-title
 		margin-top 0
 		margin-bottom 17px
 		color #000
 		font-family $rEb
 		font-size 42px
-
+		+r($m)
+			font-size 32px
 	&__body
 		padding-top 30px
 		padding-right 68px
 		padding-bottom 42px
 		padding-left 68px
-
+		+r($m)
+			padding-top 25px
+			padding-left 27px
+			padding-right 27px
+			padding-bottom 38px
 	&__text
 		margin-bottom 18px
 		min-height 64px
@@ -53,12 +81,14 @@
 		font-family $rSb
 		font-size 36px
 		line-height 1
-
-
+		+r($t)
+			font-size 28px
 	&__note
 		margin-left -15px
 		margin-right 0
 		color #E35B71
 		font-size 20px
 		line-height 1.4
+		+r($tL)
+			margin-left 0
 

@@ -1,16 +1,23 @@
 mixin hero()
 	section.hero&attributes(attributes)
-		.hero__in.container
+		.hero__in.container.wow.fadeInUp(data-wow-duration='1.5s')
 			.hero__row.row
 				.hero__col.hero__col_first
-					h1.hero__title(data-title="hurma insider")
-						span.hero__unique Уникальный
-						| практический курс по ресторанному менедженту
+					h1.hero__title( data-title="hurma insider")
+						.break-lines__line.wow.break-lines(data-wow-duration='1.5s'  data-wow-delay='1s')
+							span.hero__unique.break-lines__inner Уникальный
+						.break-lines__line.wow.break-lines(data-wow-duration='1.5s'  data-wow-delay='1.5s')
+							.break-lines__inner практический курс
+						.break-lines__line.wow.break-lines(data-wow-duration='1.5s'  data-wow-delay='2s')
+							.break-lines__inner по ресторанному
+						.break-lines__line.wow.break-lines(data-wow-duration='1.5s'  data-wow-delay='2.5s')
+							.break-lines__inner менедженту
+
 					.hero__text
 						p для владельцев, директоров, менеджеров и шеф-поваров заведений
 					.hero__buttons
-						a.hero__button.button.button_primary(href="#") записаться на курс
-						a.hero__button.button.button_additional(href="#")
+						a.hero__button.button.button_primary(href="#" data-text="записаться на курс") записаться на курс
+						a.hero__button.button.button_additional(href="#" data-text="узнать подробнее")
 							span узнать подробнее
 				.hero__col.hero__col_second
 					.hero__video
@@ -22,7 +29,7 @@ mixin hero()
 
 mixin hero-insider()
 	section.hero&attributes(attributes)
-		.hero__in.container
+		.hero__in.container.wow.fadeInUp(data-wow-duration='1.5s')
 			.hero__row.row
 				.hero__col.hero__col_first
 					h1.hero__title(data-title="hurma insider")
@@ -31,7 +38,7 @@ mixin hero-insider()
 					.hero__text
 						p для владельцев, директоров, менеджеров и шеф-поваров заведений
 					.hero__buttons
-						a.hero__button.button.button_primary(href="#") записаться на курс
-						a.hero__button.button.button_additional(href="#")
+						a.hero__button.button.button_primary(href="#" data-text="записаться на курс") записаться на курс
+						a.hero__button.button.button_additional(href="#" data-text="узнать подробнее")
 							span узнать подробнее
 

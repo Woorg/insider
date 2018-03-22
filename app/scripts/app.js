@@ -1,10 +1,11 @@
 import svg4everybody from 'svg4everybody';
 // import $ from 'jquery';
 import slick from 'slick-carousel';
-// import 'magnific-popup';
-// import mask from "jquery-mask-plugin";
+import 'magnific-popup';
+import mask from "jquery-mask-plugin";
 // import 'jquery-validation';
 // import printThis from "print-this";
+import WOW from 'wowjs/dist/wow';
 
 (function ($) {
 	svg4everybody();
@@ -27,6 +28,31 @@ import slick from 'slick-carousel';
 
 	$(function() {
 
+		// loader
+
+
+		// if( $(window).width() <= 425 ) {
+
+		// 	$('.page').addClass('loading');
+
+		// 	$(window).on('load', function () {
+		// 		$('.preload').show();
+		// 	});
+		// }
+
+		// $(window).on('resize', function () {
+		// 	$('.preload').hide();
+		// });
+
+		// $(window).on('load', function () {
+
+		// 	setTimeout( function() {
+		// 		$('.preload').addClass('preload_hide');
+
+		// 	}, 3000 );
+
+		// });
+
 
 		// Header
 
@@ -43,6 +69,20 @@ import slick from 'slick-carousel';
 			} else {
 				$('.header__body').show().removeClass('header__body_hide');
 
+			}
+		});
+
+		// Menu
+
+		$('.nav__trigger-w').on('click', function () {
+			$(this).toggleClass('nav__trigger-w_active');
+		});
+
+
+		$('.hero__down').on('click', function(e) {
+			var _scroll = $(this).attr('href');
+			if (_scroll != '#' && $(_scroll).length) {
+				$('html, body').animate({ scrollTop: $(_scroll).offset().top - 50 }, 800);
 			}
 		});
 
@@ -75,6 +115,9 @@ import slick from 'slick-carousel';
 				slidesToShow: 1,
 				dots: false,
 				arrows: true,
+				speed: 900,
+				waitForAnimate: true,
+				adaptiveHeight: true,
 				appendArrows: '.teachers__nav'
 			});
 
@@ -88,13 +131,27 @@ import slick from 'slick-carousel';
 
 			$gradCarousel.slick({
 				loop: true,
+				infinite: true,
+				speed: 900,
 				slidesToShow: 7,
 				slidesToScroll: 1,
 				dots: false,
 				centerMode: true,
 				centerPadding: '28px',
 				focusOnSelect: true,
-				variableWidth: false
+				variableWidth: false,
+				waitForAnimate: true,
+				responsive: [
+				{
+					breakpoint: 1024,
+					settings: {
+						arrows: true,
+						centerMode: true,
+						centerPadding: '40px',
+						slidesToShow: 1
+					}
+				}
+				]
 			});
 
 		}
@@ -120,18 +177,6 @@ import slick from 'slick-carousel';
 			}
 		});
 
-
-
-
-
-
-
-
-
-
-
-
-
 		function setSlideCount() {
 			let $el = $('.teachers__count').find('.teachers__total');
 			$el.text(slideCount);
@@ -153,6 +198,86 @@ import slick from 'slick-carousel';
 		});
 
 
+		// Phone Mask
+
+		$('.form__field_phone input').mask("+ 7 (999) 999-99-99", {
+			placeholder: "Ваш телефон"
+		});
+
+
+		// Animate
+
+		new WOW.WOW().init();
+
+
+		// Popup
+
+		// $('.teacher__link').magnificPopup({
+		// 	type: 'inline',
+		// 	midClick: true
+		// });
+
+		const magnificPopupInstance = $.magnificPopup.instance,
+
+		button = $('.teacher__link');
+
+		button.click(function(e){
+			e.preventDefault();
+			let dataset = $(this).data();
+			// console.log(e.target);
+			// console.log(dataset);
+			magnificPopupInstance.open({
+				type: 'inline',
+				items: dataset,
+				inline: {
+					markup: `
+					<div class="popup">
+						<div class="mfp-close"></div>
+						<div class="popup__col">
+							<div class="popup__image">
+								<img src="${dataset.image}" alt="${dataset.name}" />
+							</div>
+						</div>
+						<div class="popup__col_wide">
+							<div class="popup__title">${dataset.name}</div>
+							<div class="popup__text">
+								<p>${dataset.text}</p>
+							</div>
+						</div>
+					</div>
+					`
+				}
+			});
+		});
+
+		// Process photo
+
+		$('.process__photo-link').magnificPopup({
+			type: 'image',
+			midClick: true,
+			gallery: {
+				enabled: true
+			}
+		});
+
+
+
+
+
+
+		// let wow = new WOW().init();
+
+
+		// $(window).on("load", function() {
+		//   setTimeout(function() {
+		//     $(".preloader").fadeOut(animDuration, function() {
+		//       $(this).remove()
+		//     }),
+		//     pageLoaded = !0,
+		//     $(window).trigger("scroll")
+		//   }, 1000);
+
+		// });
 
 
 

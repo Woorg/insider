@@ -3,31 +3,61 @@
 	z-index 1
 	height 358px
 	background-color #000000
+	+r($tL)
+		height auto
 	&__in
 		padding-top 67px
+		+r($tL)
+			padding-top 59px
 	&__row
 		margin-left 0
 		margin-right 0
 		display flex
 		flex-flow row wrap
 		justify-content flex-start
+		align-items stretch
 	&__nav
 		margin-right 68px
+		+r($tL)
+			margin-right 0
+			flex-grow 1
 	&__created-by
 		margin-top -63px
 		margin-right 72px
 		margin-left auto
+		+r($tL)
+			padding-top 0
+			margin-right auto
+			margin-left auto
+			margin-bottom 65px
 
 .f-nav
 	color #FFF
+	+r($tL)
+		width 50%
+		min-width 40%
+
+		min-height 260px
+		flex-grow 1
 	&:nth-child(1)
 		min-width 98px
+		+r($tL)
+			min-width 46%
+
 	&:nth-child(2)
 		min-width 130px
+		+r($tL)
+			margin-left auto
+			min-width 46%
 	&:nth-child(3)
 		margin-right auto
+		+r($tL)
+			min-width 46%
 	&:nth-child(4)
 		min-width 262px
+		+r($tL)
+			margin-left auto
+			min-width 46%
 	&:last-child
 		margin-right 0
 	&__title
@@ -38,11 +68,17 @@
 		line-height 1
 	&__list
 		margin-bottom 0
-	&__item
+	&__item,
+	li
 		margin-bottom 20px
+		+r($m)
+			margin-bottom 15px
+			font-size 13px
+
 		&:last-child
 			margin-bottom 0
-	&__link
+	&__link,
+	a
 		color #FFF
 		text-decoration none
 		&:hover

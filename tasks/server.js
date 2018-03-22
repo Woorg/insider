@@ -1,13 +1,13 @@
-import {create as browserSync} from 'browser-sync';
+import { create as browserSync } from 'browser-sync';
 import gulp from 'gulp';
 import debuga from 'debuga';
 
 const bs = browserSync('server');
-const {PORT, OPEN, NODE_ENV, TUNNEL} = process.env;
+const { PORT, OPEN, NODE_ENV, TUNNEL } = process.env;
 
 gulp.task('server', () => (
 	bs.init({
-		files: ['dist/**/*'],
+		files: ['dist/**/*', '../**/*.php'],
 		open: !!OPEN,
 		reloadOnRestart: true,
 		port: PORT || 3000,
@@ -16,15 +16,9 @@ gulp.task('server', () => (
 				match: /<\/body>/i
 			}
 		},
-		server: {
-			baseDir: [
-				'app/resources',
-				'dist'
-			],
-			directory: false,
-			middleware: NODE_ENV !== 'production' ? [debuga()] : []
-		},
-		tunnel: !!TUNNEL,
-		injectChanges: true
+		proxy: 'http://hurmainsider.lo/',
+		injectChanges: true,
+
+		tunnel: !!TUNNEL
 	})
 ));

@@ -1,8 +1,9 @@
 mixin process()
 	section.process&attributes(attributes)
-		.process__in.container
+		.process__in.container.wow.fadeInUp(data-wow-duration='1.5s')
 			.process__row.row
-				h2.process__title Фото процесса обучения
+				h2.process__title.wow.break-lines(data-wow-duration='1.5s'  data-wow-delay='1s')
+					.break-lines__inner Фото процесса обучения
 				.process__text
 					p Каждое обучение — это не просто поток информации, но и массы положительных эмоций, полезных знакомств и уникальных возможностей!
 				ul.process__photos
@@ -20,5 +21,5 @@ mixin process()
 							img(src="assets/images/content/process-img-4.jpg", alt="")
 
 				.process__more-w
-					a.process__more.button.button_additional(href="#")
+					a.process__more.button.button_additional.button_additional-big(href="#" data-text="смотреть ещё")
 						span смотреть ещё

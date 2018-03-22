@@ -4,6 +4,11 @@ mixin header()
 			.header__in.container
 				.header__row.row
 					nav.header__nav.nav
+						label.nav__trigger-w(for="nav-checkbox")
+							span.nav__trigger-item
+							span.nav__trigger-item
+							span.nav__trigger-item
+						input.nav__checkbox#nav-checkbox(type="checkbox" value="")
 						ul.nav__list
 							li.nav__item
 								a.nav__link(href="#link")
@@ -44,6 +49,12 @@ mixin header-inner()
 			.header__in.container
 				.header__row.row
 					nav.header__nav.nav
+						label.nav__trigger-w(for="nav-checkbox")
+							span.nav__trigger-item
+							span.nav__trigger-item
+							span.nav__trigger-item
+						input.nav__checkbox#nav-checkbox(type="checkbox" value="")
+
 						ul.nav__list
 							li.nav__item
 								a.nav__link(href="#link")
@@ -84,6 +95,13 @@ mixin header-third()
 			.header__in.container
 				.header__row.row
 					nav.header__nav.nav
+
+						label.nav__trigger-w(for="nav-checkbox")
+							span.nav__trigger-item
+							span.nav__trigger-item
+							span.nav__trigger-item
+						input.nav__checkbox#nav-checkbox(type="checkbox" value="")
+
 						ul.nav__list
 							li.nav__item
 								a.nav__link(href="#link")

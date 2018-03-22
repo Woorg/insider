@@ -1,26 +1,47 @@
 .hero
 	display block
 	background #fff url('../images/general/hero-bg.jpg') 50% 0 no-repeat
+	overflow hidden
+	+r($tL)
+		background-size cover
 	&__in
 		position relative
-		// padding-top 110px
-		// padding-bottom 150px
 		min-height 750px
 		display flex
 		flex-flow row wrap
 		align-items center
 		color #000
+		+r($m)
+			display block
 	&__row
 		clr()
-
+		+r($tL)
+			margin-right 0
+			margin-left 0
 	&__col
 		float left
-
+		+r($m)
+			float none
 	&__col_first
 		width 590px
+		width ratio-percentage(590, 1140)
+		+r($tL)
+			margin-bottom 40px
+			padding-top 122px
+			width auto
+		+r($m)
+			margin-bottom 10px
+			width 100%
 	&__col_second
 		padding-left 48px
 		width 458px
+		width ratio-percentage(458, 1140)
+		+r($tL)
+			padding-bottom 26px
+			padding-left 0
+			width auto
+		+r($m)
+			width 100%
 	&__title
 		position relative
 		z-index 1
@@ -31,6 +52,10 @@
 		line-height 1.1
 		text-transform uppercase
 		overflow hidden
+		+r($m)
+			margin-right -20px
+			font-size 27px
+			letter-spacing tracking(-40)
 		&:after
 			position absolute
 			z-index -1
@@ -43,20 +68,32 @@
 			text-transform uppercase
 			white-space nowrap
 			content attr(data-title)
+			+r($m)
+				top 50%
+				bottom auto
+				left 0
+				font-size 37px
+				transform translateY(-50%)
 	&__unique
 		display block
 		font-family $n
 		font-size 49px
 		line-height 1
 		text-transform none
+		+r($m)
+			font-size 28px
 	&__text
 		position relative
 		margin-bottom 30px
 		padding-right 190px
 		padding-bottom 23px
-		color #333333
+		color #333
 		font-size 20px
 		line-height 1.4
+		+r($m)
+			padding-right 0
+			padding-bottom 12px
+			font-size 14px
 		&:after
 			position absolute
 			top 100%
@@ -71,7 +108,11 @@
 	&__buttons
 		font-size 0
 		clr()
-
+	&__button
+		&:last-child
+			+r($m)
+				display block
+				padding-left 0
 	&__video
 		position relative
 		top -15px
@@ -82,6 +123,13 @@
 		color #FFF
 		text-align center
 		border-radius 50%
+		+r($tL)
+			top 0
+		+r($m)
+			margin auto
+			padding-top 180px
+			width 253px
+			height 253px
 	&__video-button
 		position absolute
 		top 50%
@@ -94,6 +142,9 @@
 		border-radius 50%
 		hide-text()
 		transform translate(-50%, -50%)
+		+r($m)
+			width 75px
+			height 75px
 		&:after,
 		&:before
 			position absolute
@@ -102,17 +153,18 @@
 			width 0
 			height 0
 			border-style solid
-			border-width 15.5px 0 15.5px 18px
-			border-color transparent transparent transparent #000000
+			border-width 11.5px 0 11.5px 14px
+			border-color transparent transparent transparent #000
 			content ""
-			transform translate(calc(-50% + 1px), -50%)
-
+			transform translate(calc(-50% + 3px), -50% - 1px)
 	&__video-text
-			padding-left 120px
-			padding-right 120px
-			font-size 16px
-			line-height 1.125
-
+		padding-left 120px
+		padding-right 120px
+		font-size 16px
+		line-height 1.125
+		+r($m)
+			padding-left 70px
+			padding-right 70px
 	&__down
 		position absolute
 		bottom 50px
@@ -121,6 +173,9 @@
 		border none
 		padding-left 28px
 		background none
+		color initial
+		+r($tL)
+			display none
 		&:after
 			position absolute
 			top 50%
@@ -128,3 +183,6 @@
 			retinaSprite($down_button_group)
 			content ''
 			transform translateY(-50%)
+		&:hover
+			color initial
+			text-decoration none

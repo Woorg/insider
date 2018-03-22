@@ -1,8 +1,9 @@
 mixin schedule()
 	section.schedule&attributes(attributes)
-		.schedule__in.container
+		.schedule__in.container.wow.fadeInUp(data-wow-duration='1.5s')
 			.schedule__row.row
-				h2.schedule__title Расписание занятий
+				h2.schedule__title.wow.break-lines(data-wow-duration='1.5s'  data-wow-delay='1s')
+					.break-lines__inner Расписание занятий
 
 				.schedule__calendar
 
@@ -14,13 +15,13 @@ mixin schedule()
 					table.schedule__calendar-table
 						thead
 							tr
-								th(title='Sunday', data-day-abbr='Sun') Понедельник
-								th(title='Monday', data-day-abbr='Mon') вторник
-								th(title='Tuesday', data-day-abbr='Tue') среда
-								th(title='Wednesday', data-day-abbr='Wed') четверг
-								th(title='Thursday', data-day-abbr='Thu') пятница
-								th(title='Friday', data-day-abbr='Fri') суббота
-								th(title='Saturday', data-day-abbr='Sat') воскресенье
+								th(title='Sunday', data-day-abbr='Пн') Понедельник
+								th(title='Monday', data-day-abbr='ВТ') вторник
+								th(title='Tuesday', data-day-abbr='СР') среда
+								th(title='Wednesday', data-day-abbr='ЧТ') четверг
+								th(title='Thursday', data-day-abbr='ПТ') пятница
+								th(title='Friday', data-day-abbr='Сб') суббота
+								th(title='Saturday', data-day-abbr='ВС') воскресенье
 						tbody
 							tr
 								td.schedule__calendar-othermonth
@@ -185,9 +186,10 @@ mixin schedule()
 
 mixin schedule-insider-pro()
 	section.schedule&attributes(attributes)
-		.schedule__in.container
+		.schedule__in.container.wow.fadeInUp(data-wow-duration='1.5s')
 			.schedule__row.row
-				h2.schedule__title Расписание занятий
+				h2.schedule__title.wow.break-lines(data-wow-duration='1.5s'  data-wow-delay='1s')
+					.break-lines__inner Расписание занятий
 
 				.schedule__calendar
 

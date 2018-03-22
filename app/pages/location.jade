@@ -1,5 +1,7 @@
 extends /blocks/layout-default/layout-location
 
+include /blocks/preload/preload
+
 include /blocks/header/header
 include /blocks/hero/hero
 include /blocks/courses/courses
@@ -28,11 +30,14 @@ block head
 	- var pageTitle = 'Hurma insider - Место проведения';
 
 block content
+	+preload()
 	+header-third()
-	main.main
-		.main__in.container
+	main.main.scroll-animate.animate-in
+		.main__in.container.wow.fadeInUp(data-wow-duration='1.5s')
 			.main__row.row
-				h1.main__title(data-title='hurma insider') Место проведения
+				h1.main__title.wow.break-lines(data-wow-duration='1.5s'  data-wow-delay='1s' data-title='hurma insider')
+					.break-lines__inner Место проведения
+
 
 	//- +course-insider-pro().course_insider-pro
 	//- +advantages-insider-pro().advantages_third

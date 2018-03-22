@@ -3,18 +3,40 @@
 	z-index 0
 	background url('../images/content/questions-bg.jpg') 50% 0 no-repeat
 	background-size 2560px 485px
+	overflow hidden
+	+r($tL)
+		background url('../images/content/questions-bg.jpg') calc(50% - 12%) 100% no-repeat
+		background-size 2560px 485px
+	+r($m)
+		background url('../images/content/questions-small-bg.jpg') 0 100% no-repeat
+		background-size 245px 333px
 	&__in
 		padding-top 70px
 		padding-bottom 70px
 		min-height 485px
+		+r($tL)
+			padding-top 59px
+			padding-bottom 59px
+			min-height 950px
+		+r($t)
+			min-height 980px
+		+r($m)
+			min-height 850px
+		+r($mS)
+			min-height 900px
 	&__row
 		display flex
 		flex-flow row wrap
 		justify-content flex-end
 		align-items flex-start
+		+r($tL)
+			margin-left 0
+			margin-right 0
 	&__w
 		max-width 668px
 		text-align left
+		+r($m)
+			max-width 100%
 	&__title
 		margin-bottom 10px
 		@extends .title-h1
@@ -23,6 +45,5 @@
 		margin-bottom 46px
 		font-size 16px
 		line-height 1.5
-	// &__Form
-
-
+		+r($tL)
+			margin-bottom 27px

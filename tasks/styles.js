@@ -34,7 +34,7 @@ gulp.task('styles', () => (
 		.pipe(gulpIf(!isDebug, nano({zindex: false})))
 		.pipe(rename({suffix: '.min'}))
 		.pipe(gulpIf(isDebug, sourcemaps.write()))
-		.pipe(gulp.dest('dist/assets/styles'))
+		.pipe(gulp.dest('../assets/styles'))
 ));
 
 gulp.task('styles:lint', () => (

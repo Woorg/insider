@@ -1,8 +1,9 @@
 mixin course-insider()
 	.course&attributes(attributes)
-		.course__in.container
+		.course__in.container.wow.fadeInUp(data-wow-duration='1.5s')
 			.course__w(data-title='hurma insider pro')
-				h1.course__title Hurma insider
+				h1.course__title.wow.break-lines(data-wow-duration='1.5s'  data-wow-delay='1s')
+					.break-lines__inner Hurma insider
 				.course__text
 					p Курс основам управления для руководителей всех продразделений ресторана
 				ul.course__info
@@ -13,9 +14,10 @@ mixin course-insider()
 
 mixin course-insider-pro()
 	.course&attributes(attributes)
-		.course__in.container
+		.course__in.container.wow.fadeInUp(data-wow-duration='1.5s')
 			.course__w(data-title='hurma insider pro')
-				h1.course__title Hurma insider pro
+				h1.course__title.wow.break-lines(data-wow-duration='1.5s'  data-wow-delay='1s')
+					.break-lines__inner Hurma insider pro
 				.course__text
 					p Курс для опытных управленцев и владельцев, которые хотят усовершенствовать систему работы своих предприятий и достигнуть новых результатов.
 				ul.course__info

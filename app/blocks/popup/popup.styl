@@ -1,0 +1,54 @@
+.popup
+	position relative
+	margin 15px auto 15px
+	max-width 744px
+	padding-top 40px
+	padding-right 68px
+	padding-bottom 40px
+	padding-left 68px
+	display flex
+	flex-flow row wrap
+	justify-content space-between
+	align-items stretch
+	background #FFF
+	+r($t)
+		padding-top 20px
+		padding-right 34px
+		padding-bottom 20px
+		padding-left 34px
+	&__col
+		width 223px
+		+r($t)
+			margin auto
+			width auto
+	&__col_wide
+		padding-left 10px
+		width 380px
+		+r($t)
+			margin auto
+			width auto
+	&__title
+		margin-top 39px
+		margin-bottom 20px
+		font-size 32px
+		font-family $rEb
+		line-height 1.4
+		+r($t)
+			margin-top 19px
+	&__image
+		margin-left 10px
+		width 200px
+	button.mfp-close,
+	.mfp-close
+		top -16px
+		right -16px
+		width 32px
+		height 32px
+		opacity 1
+		hide-text()
+		background url('../images/general/close.png') 0 0 / cover no-repeat
+
+
+
+.mfp-bg
+	background rgba(0,0,0, .56)

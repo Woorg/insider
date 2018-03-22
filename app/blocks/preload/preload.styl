@@ -1,0 +1,42 @@
+.preload
+	position fixed
+	z-index 99999
+	left 0
+	top 0
+	right 0
+	bottom 0
+	opacity 1
+	display none
+	background #fff
+	&__logo
+		position absolute
+		top 50%
+		left 50%
+		retinaSprite($logo_group)
+		transform translate(-50%, -50%)
+		animation pulse .9s infinite ease
+.preload_hide
+	z-index -2
+	opacity 0
+	visibility hidden
+	tr(all .7s cubic-bezier( .7,0,.3,1 ))
+.loading
+	position relative
+	&:after
+		position absolute
+		z-index 999
+		top 0
+		left 0
+		right 0
+		bottom 0
+		content ''
+		background #FFF
+@keyframes pulse
+	0%
+		transform scale(1) translate( -50%, -50% )
+
+	50%
+		transform scale(1.1) translate( -50%, -50% )
+
+	100%
+		transform scale(1) translate( -50%, -50% )

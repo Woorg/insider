@@ -1,5 +1,8 @@
 extends /blocks/layout-default/layout-insider-pro
 
+
+include /blocks/preload/preload
+
 include /blocks/header/header
 include /blocks/hero/hero
 include /blocks/courses/courses
@@ -28,6 +31,7 @@ block head
 	- var pageTitle = 'Hurma insider - Курс для опытных управленцев и владельцев, которые хотят усовершенствовать систему работы своих предприятий и достигнуть новых результатов.';
 
 block content
+	+preload()
 	+header-inner()
 	+course-insider-pro().course_insider-pro
 	+advantages-insider-pro().advantages_third

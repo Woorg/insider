@@ -1,5 +1,6 @@
 .schedule
 	display block
+	overflow hidden
 	&.schedule_second
 		padding-top 90px
 		.schedule__calendar-event-w
@@ -10,9 +11,12 @@
 			line-height 1.2
 	&__in
 		padding-bottom 74px
-
-	// &__row
-
+		+r($t)
+			padding-bottom 30px
+	&__row
+		+r($tL)
+			margin-left 0
+			margin-right 0
 	&__title
 		margin-bottom 26px
 		@extends .title-h1
@@ -21,12 +25,21 @@
 		position relative
 		margin-left 5px
 		text-align center
+		+r($t)
+			margin-left 0
 	&__calendar-nav
 		margin-right -37px
 		margin-bottom 30px
 		display inline-block
 		vertical-align middle
 		text-align center
+		+r($tL)
+			margin-right 0
+		+r($t)
+			display flex
+			flex-flow row wrap
+			justify-content space-between
+			align-items center
 	&__calendar-back,
 	&__calendar-next
 		position relative
@@ -34,8 +47,6 @@
 		vertical-align middle
 		hide-text()
 		retinaSprite($calendr_nav_prev_group)
-	// &__calendar-back
-
 	&__calendar-next
 		transform rotate(180deg)
 	&__calendar-month
@@ -48,33 +59,57 @@
 		font-size 28px
 		line-height 1
 		text-transform uppercase
-
+		+r($tL)
+			padding-left 20px
+			padding-right 20px
+		+r($t)
+			padding-left 0
+			padding-right 0
+			font-size 24px
 	&__calendar-table
 		width 100%
 		color #000
 		background-color #ffffff
 		table-layout fixed
-		box-shadow 0 0 32px rgba(0, 0, 0, 0.11)
+		box-shadow 0 0 32px rgba(0, 0, 0, .11)
 		thead
 			th
 				border 1px solid #d2d2d2
 				border-width 0 1px 1px
 				padding-top 22px
-				// padding-right 45px
 				padding-bottom 25px
-				// padding-left 45px
 				min-width 70px
 				background-color #f7f7f7
 				font-family $s
 				letter-spacing tracking(15)
 				text-align center
 				text-transform uppercase
+				+r($tL)
+					position relative
+					min-width auto
+					text-indent -9999px
+					&:after
+						position absolute
+						z-index 1
+						top 50%
+						left 50%
+						width 20px
+						height 20px
+						display block
+						content attr(data-day-abbr)
+						font-family $s
+						font-size 14px
+						letter-spacing tracking(15)
+						text-align center
+						text-transform uppercase
+						text-indent 0
+						transform translate(-50%, -50%)
+						+r($m)
+							font-size 14px
 				&:first-child
 					border-width 0 1px 1px 0px
-
 				&:last-child
 					border-width 0 0 1px 1px
-
 		tbody
 			tr
 				&:last-child
@@ -89,6 +124,8 @@
 				padding-left 20px
 				height 74px
 				background #FFF
+				+r($t)
+					height 48px
 				&:first-child
 					border-width 0 1px 1px 0px
 
@@ -97,8 +134,6 @@
 	&__calendar-othermonth,
 	&__calendar-thismonth
 		position relative
-	// &__calendar-thismonth
-
 	.schedule__calendar-event-w
 		position absolute
 		top 5px
@@ -106,18 +141,28 @@
 		bottom 5px
 		right 5px
 		background-color #dc324d
+		+r($t)
+			top 3px
+			right 3px
+			left 3px
+			bottom 3px
 		.schedule__calendar-day,
 		.schedule__calendar-event
 			top 12px
 			color #FFF
+			+r($t)
+				top 6px
 		.schedule__calendar-day
 			right 12px
+			+r($t)
+				right 6px
 		.schedule__calendar-event
 			left 12px
+			+r($t)
+				left 6px
 	&__calendar-othermonth
 		.schedule__calendar-day
 			color #dfe4ee
-
 	&__calendar-day
 		position absolute
 		top 15px
@@ -127,6 +172,9 @@
 		font-size 15px
 		line-height 1
 		text-transform uppercase
+		+r($t)
+			top 6px
+			right 6px
 	&__calendar-event
 		position absolute
 		left 13px
@@ -135,6 +183,8 @@
 		font-size 15px
 		line-height 1
 		text-transform uppercase
-
+		+r($t)
+			left 6px
+			hide-text()
 
 

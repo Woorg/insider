@@ -1,16 +1,21 @@
 .problems
+	overflow hidden
 	&__in
 		padding-top 40px
 		padding-bottom 88px
-
-	// &__row
-
+		+r($tL)
+			padding-top 60px
+			padding-bottom 40px
 	&__title
 		margin-top 122px
 		margin-bottom 6px
 		@extends .title-h1
+		+r($tL)
+			margin-top 0
+		+r($m)
+			font-size 32px
 	&__text
 		font-size 20px
 		line-height 1.4
-	// &__image
-	// 	img
+		+r($tL)
+			margin-bottom 30px

@@ -1,12 +1,15 @@
 .tabs
 	display block
-	// overflow hidden
 	&__nav
 		margin-bottom 0
 		display inline-block
 		vertical-align middle
 		font-size 0
 		white-space normal
+		+r($tL)
+			vertical-align top
+		+r($t)
+			display block
 	&__item
 		position relative
 		display inline-block
@@ -30,6 +33,11 @@
 		line-height 1.8
 		text-transform uppercase
 		tr(all .3s ease)
+		+r($tL)
+			font-size 18px
+			line-height 1.7
+		+r($t)
+			padding-left 0
 		&:before
 			position absolute
 			z-index 1
@@ -47,20 +55,27 @@
 			line-height 1
 			transform translateY(calc(-50% - 4px))
 			content '/'
+			+r($tL)
+				font-size 18px
+				transform translateY(calc(-50% - 1px))
+			+r($t)
+				transform translateY(calc(-50% - 1px))
 		&:hover,
 		&:focus
 			color #000
 			text-decoration none
-
 		+r($t)
-			padding-right 11px
-			padding-left 11px
-			font-size 12px
-
+			margin-right 6px
+			padding-right 21px
+			padding-left 0
+			font-size 18px
+		+r($m)
+			margin-right 6px
+			padding-left 0
 	&__tab
 		display none
-
+		tr(all .3s ease)
 	&__tab_active
 		display block
 		font-size 14px
-
+		tr(all .3s ease)

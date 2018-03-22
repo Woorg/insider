@@ -1,6 +1,6 @@
 mixin advantages()
 	.advantages&attributes(attributes)
-		.advantages__in.container
+		.advantages__in.container.wow.fadeInUp(data-wow-duration='1.5s')
 			.advantages__row.row
 				ul.advantages__list
 					li.advantages__item.advantages__item_1
@@ -24,9 +24,10 @@ mixin advantages()
 
 mixin advantages-insider()
 	.advantages&attributes(attributes)
-		.advantages__in.container
+		.advantages__in.container.wow.fadeInUp(data-wow-duration='1.5s')
 			.advantages__row.row
-				h2.advantages__title Этот курс для Вас, если:
+				h2.advantages__title.wow.break-lines(data-wow-duration='1.5s'  data-wow-delay='1s')
+					.break-lines__inner Этот курс для Вас, если:
 				ul.advantages__list
 					li.advantages__item.advantages__item_1
 						.advantages__icon
@@ -51,9 +52,10 @@ mixin advantages-insider()
 
 mixin advantages-insider-pro()
 	.advantages&attributes(attributes)
-		.advantages__in.container
+		.advantages__in.container.wow.fadeInUp(data-wow-duration='1.5s')
 			.advantages__row.row
-				h2.advantages__title Этот курс для Вас, если:
+				h2.advantages__title.wow.break-lines(data-wow-duration='1.5s'  data-wow-delay='1s')
+					.break-lines__inner Этот курс для Вас, если:
 				ul.advantages__list
 					li.advantages__item.advantages__item_1
 						.advantages__icon
