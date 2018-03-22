@@ -1,4 +1,4 @@
-.wow 
+.wow
 	visibility hidden
 .fadeInUp
 	animation-name fadeInUp
@@ -12,7 +12,9 @@
 	animation-duration 1s
 	animation-fill-mode both
 	will-change transform, opacity
+	gpu()
 	&__inner
+		gpu()
 		will-change transform, opacity
 @keyframes fadeInUp
 	0%
@@ -24,14 +26,14 @@
 @keyframes break-lines
 	0%
 		transition all 2s ease
-		transform translateX(120%) translateZ(0)
+		transform translateX(50%) translateZ(0)
 		will-change transform, opacity
 	90%
 		transition all 2s ease
 		transform translateX(-1%) translateZ(0)
 		will-change transform, opacity
 	100%
-		opacity 1 
+		opacity 1
 		transform translateX(0) translateZ(0)
 		transition all 1s ease
 		will-change transform, opacity

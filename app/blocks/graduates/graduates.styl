@@ -56,7 +56,8 @@
 		background-size cover
 		border-radius 50%
 		overflow hidden
-		tr(width .3s ease)
+		tr(transform .8s ease)
+		gpu()
 		+r($m)
 			margin-bottom 30px
 		&:after
@@ -93,7 +94,7 @@
 			background-size 100% 100%
 			transform scale(2.3)
 			box-shadow 0 0 32px rgba(0, 0, 0, 0.11)
-			tr(transform .3s ease)
+			tr(transform .8s ease)
 			+r($tL)
 				transform scale(2)
 			+r($m)
