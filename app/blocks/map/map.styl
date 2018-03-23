@@ -8,8 +8,10 @@
 		padding-top 45px
 		padding-bottom 60px
 		+r($t)
-			padding-top 30px
-			padding-bottom 30px
+			padding-top 60px
+			padding-bottom 40px
+		+r($m)
+			padding-top 40px
 	&__row
 		+r($tL)
 			margin-left 0
@@ -88,15 +90,23 @@
 			padding-bottom 20px
 			width auto
 			min-height 120px
-		+r($mS)
-			width 86%
+		+r($m)
+			left 5px
+			right 5px
+			padding-right 0
+			padding-left 15px
 	&__address-title
 		margin-bottom 15px
 		font-family $s
 		font-size 32px
 		line-height 1.71875
 		text-transform uppercase
+		white-space nowrap
 		+r($tL)
 			margin-bottom 5px
 			font-size 24px
+		+r($m)
+			margin-bottom 10px
+			letter-spacing tracking(-40	)
+			line-height 1
 

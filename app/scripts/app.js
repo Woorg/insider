@@ -24,50 +24,42 @@ import WOW from 'wowjs/dist/wow';
 	].join(';');
 
 	console.log('%c заказать html верстку', styles);
-	console.log('%c gorlov35@gmail.com', styles);
+	console.log('%c sales@webjeb.ru', styles);
+	console.log('%c портфолио webjeb.ru', styles);
+
 
 	$(function() {
 
 		// loader
 
 
-		// if( $(window).width() <= 425 ) {
-
-		// 	$('.page').addClass('loading');
-
-		// 	$(window).on('load', function () {
-		// 		$('.preload').show();
-		// 	});
-		// }
-
-		// $(window).on('resize', function () {
-		// 	$('.preload').hide();
-		// });
-
-		// $(window).on('load', function () {
-
-		// 	setTimeout( function() {
-		// 		$('.preload').addClass('preload_hide');
-
-		// 	}, 3000 );
-
-		// });
-
-
 		// Header
 
+		// $('.page_inner  .header__body').hide();
+
+
 		if(	$(window).scrollTop() >= 1 ) {
-			$('.header__body').hide().addClass('header__body_hide');
+			$('.page_inner .header__body').hide();
+			$('.home .header__body, .page_insider .header__body, .page_insider-pro .header__body')
+				.hide()
+				.addClass('header__body_hide');
 		} else {
-			$('.header__body').show().removeClass('header__body_hide');
+			$('.page_inner .header__body').hide();
+			$('.home .header__body, .page_insider .header__body, .page_insider-pro .header__body')
+				.show()
+				.removeClass('header__body_hide');
 
 		}
 
 		$(window).on('scroll', function () {
 			if(	$(window).scrollTop() >= 1 ) {
-				$('.header__body').hide().addClass('header__body_hide');
+				$('.home .header__body, .page_insider .header__body, .page_insider-pro .header__body')
+					.hide()
+					.addClass('header__body_hide');
 			} else {
-				$('.header__body').show().removeClass('header__body_hide');
+				$('.home .header__body, .page_insider .header__body, .page_insider-pro .header__body')
+					.show()
+					.removeClass('header__body_hide');
 
 			}
 		});
@@ -142,15 +134,42 @@ import WOW from 'wowjs/dist/wow';
 				variableWidth: false,
 				waitForAnimate: true,
 				responsive: [
-				{
-					breakpoint: 1024,
-					settings: {
-						arrows: true,
-						centerMode: true,
-						centerPadding: '40px',
-						slidesToShow: 1
+					{
+						breakpoint: 1025,
+						settings: {
+							arrows: true,
+							centerMode: true,
+							centerPadding: '0',
+							slidesToShow: 7
+						}
+					},
+					{
+						breakpoint: 992,
+						settings: {
+							arrows: true,
+							centerMode: true,
+							centerPadding: '0',
+							slidesToShow: 5
+						}
+					},
+					{
+						breakpoint: 769,
+						settings: {
+							arrows: true,
+							centerMode: true,
+							centerPadding: '0',
+							slidesToShow: 1
+						}
+					},
+					{
+						breakpoint: 426,
+						settings: {
+							arrows: true,
+							centerMode: true,
+							centerPadding: '0',
+							slidesToShow: 1
+						}
 					}
-				}
 				]
 			});
 
@@ -212,11 +231,6 @@ import WOW from 'wowjs/dist/wow';
 
 		// Popup
 
-		// $('.teacher__link').magnificPopup({
-		// 	type: 'inline',
-		// 	midClick: true
-		// });
-
 		const magnificPopupInstance = $.magnificPopup.instance,
 
 		button = $('.teacher__link');
@@ -224,8 +238,6 @@ import WOW from 'wowjs/dist/wow';
 		button.click(function(e){
 			e.preventDefault();
 			let dataset = $(this).data();
-			// console.log(e.target);
-			// console.log(dataset);
 			magnificPopupInstance.open({
 				type: 'inline',
 				items: dataset,
@@ -242,6 +254,10 @@ import WOW from 'wowjs/dist/wow';
 							<div class="popup__title">${dataset.name}</div>
 							<div class="popup__text">
 								<p>${dataset.text}</p>
+
+							</div>
+							<div class="popup__text">
+								${dataset.resume}
 							</div>
 						</div>
 					</div>
@@ -259,25 +275,6 @@ import WOW from 'wowjs/dist/wow';
 				enabled: true
 			}
 		});
-
-
-
-
-
-
-		// let wow = new WOW().init();
-
-
-		// $(window).on("load", function() {
-		//   setTimeout(function() {
-		//     $(".preloader").fadeOut(animDuration, function() {
-		//       $(this).remove()
-		//     }),
-		//     pageLoaded = !0,
-		//     $(window).trigger("scroll")
-		//   }, 1000);
-
-		// });
 
 
 

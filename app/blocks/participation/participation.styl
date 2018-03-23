@@ -12,14 +12,24 @@
 		+r($tL)
 			margin-left 0
 			margin-right 0
+			display flex
+			flex-flow row wrap
+			justify-content flex-start
+			align-items stretch
+			flex 1
 	&__cols
 		margin-bottom 22px
-		display flex
-		flex-flow row wrap
-		align-items stretch
 		+r($tL)
+			display flex
+			flex-flow row wrap
 			justify-content space-between
-			align-items flex-start
+			align-items stretch
+			flex 1
+	&__col
+		+r($tL)
+			margin-bottom 30px
+
+
 	&__title
 		margin-bottom 54px
 		@extends .title-h1
@@ -41,7 +51,15 @@
 		+r($tL)
 			margin-bottom 40px
 			margin-left 0
+
+			display flex
+			flex-flow column wrap
+			justify-content flex-start
+			align-items stretch
+			flex 1
+
 			width auto
+			height 100%
 		&:last-child
 			margin-right 15px
 			margin-bottom 20px
@@ -63,6 +81,11 @@
 		padding-right 68px
 		padding-bottom 42px
 		padding-left 68px
+		+r($tL)
+			display flex
+			flex-flow column wrap
+			align-items stretch
+			flex 1
 		+r($m)
 			padding-top 25px
 			padding-left 27px
@@ -81,6 +104,8 @@
 		font-family $rSb
 		font-size 36px
 		line-height 1
+		+r($tL)
+			margin-top auto
 		+r($t)
 			font-size 28px
 	&__note

@@ -14,13 +14,13 @@
 		background none
 		cursor pointer
 		tr(all .2s cubic-bezier(.7,0,.3,1))
+		gpu()
 		+r($d)
 			display block
 		+r($tL)
-			margin-left 15px
-		+r($m)
 			margin-left 0
 	&__trigger-w_active
+		transform translateX(5px)
 		tr(all .2s cubic-bezier(.7,0,.3,1))
 		.nav__trigger-item
 			position relative
@@ -66,9 +66,12 @@
 	&__item
 		+r($d)
 			margin auto
-			max-width 970px
+			max-width 940px
+		+r($tM)
+			max-width 720px
+
 		&:first-child
-			.nav__link
+			.nav-list__link
 				padding-left 0
 				padding-right 30px
 				+r($d)

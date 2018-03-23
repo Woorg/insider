@@ -1,10 +1,10 @@
 html,
 body
 	height 100%
+
 .page
 	position relative
 	padding-top 50px
-	min-width 320px
 	min-height 100%
 	background #fff
 	color #333333
@@ -17,32 +17,57 @@ body
 		color #FFF
 	tr(all .3s linear)
 
-	&_insider
+	&.page_insider,
+	&.single_courses_insider
 		background url('../images/content/hero-insider.jpg') 50% 0 no-repeat
 		background-size 2560px 462px
-
-		.nav-list__item_course
-			margin-right -2px
-			background-color #dc324d
-			+r($d)
-				margin auto
+		.header__body
+			display block
+		.nav-list__item
+			&.nav-list__item_course
+				margin-right 0
+				background-color #dc324d
+				+r($d)
+					margin auto
+					background-color transparent
+			&.nav-list__item_course_pro
+				margin-left 0
 				background-color transparent
-		.nav-list__item_course_pro
-			margin-left 0
-			background-color transparent
-
-	&_insider-pro
+				+r($d)
+					margin-left auto
+					margin-right auto
+	&.page_insider-pro,
+	&.single_courses_insider_pro
 		background url('../images/content/hero-insider-pro.jpg') 50% 0 no-repeat
 		background-size 2560px 462px
-
-		.nav-list__item_course
-			background-color transparent
-		.nav-list__item_course_pro
-			margin-left -2px
-			background-color #dc324d
-			+r($d)
-				margin auto
+		.header__body
+			display block
+		.nav-list__item
+			&.nav-list__item_course
 				background-color transparent
+			&.nav-list__item_course_pro
+				margin-left -2px
+				background-color #dc324d
+				+r($d)
+					margin-right auto
+					margin-left auto
+					background-color transparent
+
+	&_inner
+		background url('../images/content/location-bg.jpg') 50% 0 no-repeat
+		background-size 2560px 328px
+		+r($tL)
+			background url('../images/content/location-bg.jpg') calc(50% + 50px) calc(0% - 128px) no-repeat
+			background-size 2560px 328px
+		+r($t)
+			background url('../images/content/location-bg.jpg') calc(50% + 50px) calc(0% - 128px) no-repeat
+			background-size 2560px 328px
+
+		+r($m)
+			background url('../images/content/location-small-bg.jpg') 50% 0 no-repeat
+			background-size 425px 200px
+		.header__body
+			display none
 
 	&_location
 		background url('../images/content/location-bg.jpg') 50% 0 no-repeat
@@ -67,7 +92,6 @@ body
 		+r($t)
 			background url('../images/content/teachers-bg.jpg') calc(50% + 50px) calc(0% - 128px) no-repeat
 			background-size 2560px 328px
-
 		+r($m)
 			background url('../images/content/teachers-bg.jpg') 50% 0 no-repeat
 			background-size 425px 200px
@@ -146,7 +170,8 @@ body
 		font-family $rB
 		letter-spacing tracking(0)
 		box-shadow 0 0 16px rgba(0, 0, 0, 0.24)
-		&:hover
+		&:hover,
+		&:focus
 			box-shadow none
 			color #ffffff
 		&:before
@@ -157,7 +182,8 @@ body
 		font-family $rSb
 		letter-spacing tracking(50)
 		color #000
-		&:hover
+		&:hover,
+		&:focus
 			color #000
 			span
 				display block
@@ -209,6 +235,8 @@ body
 			font-size 16px
 			&:before
 				font-size 16px
+				+r($m)
+					padding-top 0
 			span
 				padding-right 0
 				&:after
@@ -217,11 +245,9 @@ body
 				span
 					&:after
 						right -8px
-
 	&_submit
 		&:before
 			content attr(value)
-
 .video-button
 	position relative
 	margin auto

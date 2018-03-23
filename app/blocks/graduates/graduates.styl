@@ -10,12 +10,16 @@
 		@extends .title-h1
 	&__carousel
 		tr(width .3s ease)
+		+r($tL)
+			margin-left 50px
+			margin-right 50px
 		.slick-arrow
 			position absolute
+			z-index 1
 			border 2px solid #dc324d
 			width 36px
 			height 36px
-			background-color #ffffff
+			background-color transparent
 			border-radius 50%
 			transform translateY( calc(-50% - 80px) )
 			+r($m)
@@ -31,9 +35,13 @@
 				opacity 1
 			&.slick-prev
 				left 0
+				// +r($tL)
+				// 	left 0 !important
 			&.slick-next
 				right 0
 				opacity 1
+				// +r($tL)
+				// 	right 0 !important
 				&:before
 					transform translate(-50%, -50%) rotate(180deg)
 	&__item
@@ -96,7 +104,7 @@
 			box-shadow 0 0 32px rgba(0, 0, 0, 0.11)
 			tr(transform .8s ease)
 			+r($tL)
-				transform scale(2)
+				transform scale(1.8)
 			+r($m)
 				transform scale(1.4)
 			&:after
@@ -106,3 +114,6 @@
 			margin-right -60px
 			display block
 			opacity 1
+			// +r($tL)
+			// 	margin-left 0
+			// 	margin-right 0

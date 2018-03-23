@@ -28,10 +28,14 @@
 			line-height 1.1
 			text-transform uppercase
 			letter-spacing tracking(-40)
+			+r($m)
+				margin-bottom 10px
 		.course__text
 			margin-bottom 20px
 			font-size 16px
 			color #FFF
+			+r($m)
+				margin-bottom 10px
 		.course__info-item
 			font-size 20px
 			+r($tL)
@@ -65,6 +69,13 @@
 			text-transform uppercase
 			gpu()
 
+	&__link
+		color #fff
+		text-decoration none
+		&:hover,
+		&:focus
+			color #fff
+			text-decoration none
 	&__top
 		padding-top 60px
 		padding-right 68px

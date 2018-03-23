@@ -18,7 +18,9 @@
 			min-height 120px
 			justify-content space-between
 			+r($tL)
-				justify-content space-around
+				justify-content space-between
+				align-items stretch
+				flex 1
 		.advantages__item
 			padding-right 18px
 			padding-bottom 37px
@@ -26,8 +28,20 @@
 			width ratio-percentage(250, 1140)
 			height auto
 			+r($tL)
-				margin-bottom 65px
+				margin-right 40px
+				margin-bottom 0
 				width 260px
+				min-height 100%
+				flex 1
+				&:last-child
+					margin-right 0
+			+r($t)
+				margin-right 0
+				margin-bottom 65px
+				width 100%
+				flex 0 0 auto
+			+r($m)
+				min-height 180px
 		.advantages__item_1
 			.advantages__icon
 				&:after
@@ -59,7 +73,7 @@
 			justify-content center
 			min-height 150px
 			+r($tL)
-				justify-content space-around
+				justify-content flex-start
 		.advantages__item
 			padding-right 40px
 			padding-bottom 25px
@@ -67,7 +81,18 @@
 			width 307px
 			height auto
 			+r($tL)
+				margin-right 40px
+				// margin-bottom 65px
+				margin-bottom 0
+				padding-bottom 35px
+				flex 1
+				&:last-child
+					margin-right 0
+			+r($t)
+				margin-right 0
 				margin-bottom 65px
+				width 100%
+				flex 0 0 auto
 		.advantages__item_1
 			.advantages__icon
 				&:after
@@ -92,6 +117,9 @@
 		+r($tL)
 			margin-left 0
 			margin-right 0
+			padding-top 40px
+		+r($t)
+			padding-top 0
 	&__list
 		margin-bottom 0
 		min-height 200px
@@ -102,6 +130,7 @@
 			display flex
 			justify-content space-between
 		+r($t)
+			padding-top 40px
 			justify-content center
 	&__item
 		margin-right 42px
@@ -119,6 +148,7 @@
 			width 95%
 		+r($m)
 			margin-bottom 179px
+			// min-height 100px
 		&:last-child
 			margin-right 0
 			margin-bottom 0
